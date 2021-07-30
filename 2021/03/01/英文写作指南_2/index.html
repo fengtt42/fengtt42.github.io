@@ -1,0 +1,633 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>论文写作技巧_2 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fengtt's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/statistics/">
+                <i class="iconfont icon-tags-fill"></i>
+                Statistics
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/friends/">
+                <i class="iconfont icon-friends"></i>
+                Friends
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/">
+                <i class="iconfont icon-comment"></i>
+                Contact
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="论文写作技巧_2">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-01 01:16" pubdate>
+        March 1, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      27
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">论文写作技巧_2</h1>
+            
+            <div class="markdown-body">
+              <h2 id="全文颜色说明"><a href="#全文颜色说明" class="headerlink" title="全文颜色说明"></a>全文颜色说明</h2><blockquote>
+<p><font color=red>red</font>代表与小标题相关的关键信息。<br><font color=blue>blue</font>代表与小标题无关的重要信息。<br><font color=green>green</font>代表自己归纳出的对自己很关键的信息。</p>
+</blockquote>
+<hr>
+<h2 id="7-在独立分句之后用冒号来引导一系列具体的事物，一个同位语，一个进一步阐述的词语或者一条说明性的引语。"><a href="#7-在独立分句之后用冒号来引导一系列具体的事物，一个同位语，一个进一步阐述的词语或者一条说明性的引语。" class="headerlink" title="7. 在独立分句之后用冒号来引导一系列具体的事物，一个同位语，一个进一步阐述的词语或者一条说明性的引语。"></a>7. 在独立分句之后用冒号来引导一系列具体的事物，一个同位语，一个进一步阐述的词语或者一条说明性的引语。</h2><p><strong>A. 冒号的作用—在一个独立分句之后引导一系列的事物</strong><br>在独立分句之后用<font color=red>冒号</font>来引导一系列具体的事物，一个同位语，一个进一步阐述的词语或者一条说明性的引语。其后面部分和前面的分句是密切相关的，冒号的作用比逗号强，比破折号正式，但其分割作用不如分号。<font color=blue>冒号通常位于独立分句之后，但不应置于动词和其宾语或介词和其宾语之间</font>。</p>
+<blockquote>
+<p>Your dedicated whittler requires: a knife, apiece of wood, and a back porch.  (错误表达)<br>Your dedicated whittler<font color=red> requires three props: </font>a knife, apiece of wood, and a back porch.(动词和其宾语不能分开)</p>
+</blockquote>
+<hr>
+<p><strong>B. 冒号的作用—在一个独立分句之后对其进行解释的同位语或者分句</strong><br>有2个独立分句，如果第二个分句是对第一个分句进行解释或者进一步阐述，则用冒号连接。</p>
+<blockquote>
+<p>But even so, there was a directness and dispatch about animal burial: there was no stopover in the undertaker’s foul parlor, no wreath  or spray.</p>
+</blockquote>
+<hr>
+<p><strong>C. 冒号的作用—在一个独立分句之后对其说明性的引语</strong><br>冒号还可以用来引导依据佐证或说明前面一个分句的引语。</p>
+<blockquote>
+<p>The squalor of the streets reminded him of a line from Qscar Wilde: “We are all in gutter,  but some of us are looking at the stars.”</p>
+</blockquote>
+<hr>
+<p><strong>C. 冒号的作用—表达某些特定的形式</strong><br><font color=red>超级正式函件称呼之后的冒号</font>，表明时间的小时和分钟之间的冒号。书名和副标题之间的冒号，以及《圣经》各章节之间的冒号，在形式上都有分隔作用。</p>
+<blockquote>
+<p>Dear Mr. Montague:<br>departs at 10:48 P.M.  （开车）<br><em>Pratical Calligraphy: An Introduction to Italic Script</em><br>Nehemiah 11:7 (圣经第十一章第七节)</p>
+</blockquote>
+<hr>
+<h2 id="8-破折号表示突然停顿或者中断，引导一个较长的同位语或简短的总结"><a href="#8-破折号表示突然停顿或者中断，引导一个较长的同位语或简短的总结" class="headerlink" title="8. 破折号表示突然停顿或者中断，引导一个较长的同位语或简短的总结"></a>8. 破折号表示突然停顿或者中断，引导一个较长的同位语或简短的总结</h2><p>破折号表示突然停顿或者中断，引导一个较长的同位语或简短的总结。破折号的分隔作用比逗号强，但不如分号正式，又不如圆括号严谨。<font color=blue>只有当普通的标点符号似乎都不适用的时候，才使用破折号。</p>
+<blockquote>
+<p>His first thought on getting out of bed — if he had any thought al all —- was to get back in again.<br>Violence, the kind you see on the television, is not honestly violent. there lies it harm.<br>Violence—-the kind you see on the television—-is not honestly violent—-there lies it harm.</p>
+</blockquote>
+<hr>
+<h2 id="9-主语的单复数决定谓语动词的单复数"><a href="#9-主语的单复数决定谓语动词的单复数" class="headerlink" title="9. 主语的单复数决定谓语动词的单复数"></a>9. 主语的单复数决定谓语动词的单复数</h2><p>主语的单复数决定谓语动词的单复数，介于主语和谓语动词之间的词不影响谓语动词的单复数。</p>
+<blockquote>
+<p>The bittersweet flavor of youth —- its trials, its joys, its adventures, its challenges —- <font color=red>is</font> not soon forgotten.</p>
+</blockquote>
+<hr>
+<p><strong>A. 关系代词作主语—-其谓语动词与代指的主体单复数一致</strong><br>关系代词(who, which, that, as, but)作主语并由它引导的定语从句接在“one of ”等不定代词之后时，从句中的谓语动词很容易用单数（这是错误的），应该用用复数。这个与关系代词所指代的主语单复数一致。</p>
+<blockquote>
+<p>One of those people who <font color=red>are</font> never ready on time.<br>One of the ablest men who <font color=red>have</font> attacked this problem. (能人)</p>
+</blockquote>
+<hr>
+<p><strong>B. 不定代词作主语—-其谓语动词用单数</strong><br>不定代词作主语时，其谓语动词用单数。不定代词包括：each，either，everyone，everybody，neither，nobody，someone(某人)。</p>
+<blockquote>
+<p>Everybody thinks he <font color=red>has</font> a sense of humor.<br>Although both clocks strike-cheerfully, neither <font color=red>keeps</font> good time.</p>
+</blockquote>
+<hr>
+<p>特例：<br>当none表示“没有一个人”时，谓语动词用单数，当none表示“一个以上的人或物”时，谓语动词用复数。</p>
+<blockquote>
+<p>None of us  <font color=red>is</font> perfect.<br>None <font color=red>are</font> so fallible as those who are sure they’re right.</p>
+</blockquote>
+<hr>
+<p><strong>C. 用and连接的复合主语作主语—-其谓语动词用复数</strong><br>由2个或者2个以上的名词用and连接起来组成的复合主语，谓语动词用复数。</p>
+<blockquote>
+<p>The dog and the cat were walking close at hand.</p>
+</blockquote>
+<hr>
+<p><font color=red>特例：</font><br>某些约定俗称的复合主语，就像由each或者every修饰的复合主语，因搭配固定而被看作一个单位，谓语动词用单数。</p>
+<blockquote>
+<p>The long and the short of it is …<br>Bread and butter was all she served.<br>Give and take is essential to a happy household.<br>Every window, picture, and mirror was smashed.</p>
+</blockquote>
+<hr>
+<p><strong>D. 用其他连词连接的复合主语作主语—-其谓语动词与第一个主语单复数一致</strong><br>一个单数主语，即使由其他的名词通过with，as well as，in addition to，except，together with，no less than(正好，就是)与之相连，谓语动词用单数。</p>
+<blockquote>
+<p>His speech as well as his manner is objectionable.(令人讨厌的)<br>The trouble with truth is its many varieties.</p>
+</blockquote>
+<hr>
+<p><strong>E. 部分名词表面时复数形式,但语法上是单数</strong></p>
+<blockquote>
+<p>   Politics is an art, not a science. (政治)<br>The Republican Headquarters is on this side of the tracks.<br>一本书的目录(contents)单数概念,一个坛子里面的东西(contents)可能单数可能复数,与坛子里面的内容有关.</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><font color=red>核心区分点在于: 插入语,代词,复合主语,词汇形式</font></p>
+</blockquote>
+<h2 id="10-代词的格要用的得当"><a href="#10-代词的格要用的得当" class="headerlink" title="10. 代词的格要用的得当."></a>10. 代词的格要用的得当.</h2><p>代词包括:人称代词(主格,宾格),物主代词(adj, n),不定代词,关系代词(who: 主格,宾格,所有格), 反身代词等.<br>人称代词和关系代词who,作主语和宾语时,需要用主格和宾格.</p>
+<blockquote>
+<p>The culprit, it turned out, was he.(罪犯原来时他)<br>Who knocks?<br>Whom should I ask?</p>
+</blockquote>
+<hr>
+<p><strong>A. Who引导从句时,其格取决于其在从句中的语法功能(做主语,还是宾语,还是所有格)</strong></p>
+<blockquote>
+<p>Give this work to whoever looks idle.<br>Tom is the candidate who we think will win. (we think he will win)<br>Tom is the candidate whom we hope to elect.(we hope to elect him)</p>
+</blockquote>
+<hr>
+<p><strong>B. 代词和比较级连用的时候,人称代词使用主格和宾格,意思完全不同</strong><br>代词和比较级连用的时候,人称代词使用主格和宾格,意思完全不同,不要省略代词后面的动词</p>
+<blockquote>
+<p>I think Tom admires Jessica more than I.   —&gt; I think Tom admires Jessica more than I do.<br>I think Tom admires Jessica more than me. —&gt; I think Tom admires Jessica more than he admires me.<br>同样一句话,不同格,意思完全不同,所以不要省略代词后面的动词</p>
+</blockquote>
+<p>一个特殊的句子:<br>A group of us taxpayers protested. (我们一群纳税人提出了抗议)</p>
+<blockquote>
+<p>us作为taxpayers的同位语,一起充当介词of的宾语. 这个句子语法上面没有问题,但是表达不恰当.<br>修改为: <font color=red>A group of us protested as taxpayers.</font> (语言最大的特点是无歧义,而非技巧)</p>
+</blockquote>
+<hr>
+<p><strong>C. 反身代词不能用作句子的主语</strong></p>
+<p><strong>D. 形容词性的物主代词 VS 名词性物主代词</strong></p>
+<blockquote>
+<p>your hat<br>a hat of yours<br>The dog has buried one of your gloves and one of mine in the flower bed.</p>
+</blockquote>
+<hr>
+<p><strong>E. 代词 + 现在分词 VS 动名词</strong><br><font color=red></font> </p>
+<blockquote>
+<p>Do you mind <font color=red>me</font>  asking a question? (现在分词做宾补) —&gt;  Do you mind <font color=blue>me</font>  asking a question?  (mind的核心在于me)<br>Do you mind <font color=red>my</font>  asking a question? (动名词做宾语) —&gt; Do you mind <font color=blue>my  asking a question</font>? (mind的核心在于question)</p>
+</blockquote>
+<hr>
+<h2 id="11-位于句首的分词短语必须与句子的主语相关"><a href="#11-位于句首的分词短语必须与句子的主语相关" class="headerlink" title="11. 位于句首的分词短语必须与句子的主语相关."></a>11. 位于句首的分词短语必须与句子的主语相关.</h2><p>连词后的分词短语,介词后的动名词短语,作为同位语的名词短语,形容词短语位于句首时,其必须与句子的主语相关,主语是分句的主语.</p>
+<blockquote>
+<p> <font color=blue>Walking slowly down the road</font>, he saw a woman accompanied by two children. (绿色部分其主语是he)<br>he saw a woman, accompanied by two children, <font color=blue>Walking slowly down the road</font>(绿色部分其主语是woman)</p>
+</blockquote>
+<p> <font color=green>所以分词短语位于句尾的时候关联的不一定是句子的主语,但是位于句首时,关联的一定时句子的主语.否则句子会非常荒唐.</font></p>
+<blockquote>
+<p>On arriving in Chicago, his friends met him at the station. (错误)<br>On arriving in Chicago, he was met at the station by his friends. </p>
+</blockquote>
+<blockquote>
+<p>Young and inexperienced, the tack seemed easy to me. (错误)<br>Young and inexperienced, I thought the tack seemed easy.</p>
+</blockquote>
+<blockquote>
+<p>Being in a dilapidated condition, I was able to buy the house very cheap.(错误)<br>Being in a dilapidated condition, the house was able to be buyed by me very cheap.</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><font size=5pt, color  = pink>如果有任何问题,欢迎留言探讨.如果对您有用,欢迎<font size=5pt, color  = LightSteelBlue>点赞关注.<br><font size=3pt, color  = pink>如需转载,请注明出处:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_31813549/article/list/3">Tonny的博客</a><br> <html><br> <meta charset="utf-8"><br> <body bgcolor="red"><br> <p><br> <table border="1" width="700" height="30" bgcolor="red" align="center"><br> <tr bgcolor="red purple"><br> </tr><br> <tr bgcolor="green red"><br> <td><a href="https://blog.csdn.net/qq_31813549/article/details/111369266?utm_medium=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control" target=_blank>笔记1</a></td><br> <td><a href="https://blog.csdn.net/qq_31813549/article/details/111400578#comments_14285882" target=_blank >笔记2</a></td><br> <td><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_31813549/article/details/111469306?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-1.control">笔记3</a></td><br> <td><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_31813549/article/details/111469306?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-1.control" >笔记4</a></td><br> </tr><br> </table><br> </p><br> </body><br> </html></p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Paper/">Paper</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Paper/">Paper</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/01/%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97_3/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">论文写作技巧_3</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/01/%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97_4/">
+                        <span class="hidden-mobile">论文写作技巧_4</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://github.com/fengtt42/fengtt42.github.io" target="_blank" rel="nofollow noopener"><span>Github</span></a> <i class: "iconfont icon-github-fill"></i> <a href="https://blog.csdn.net/qq_31813549?spm=1011.2124.3001.5343" target="_blank" rel="nofollow noopener"><span>CSDN</span></a> <i class: "iconfont icon-github-fill"></i> <a href="https://www.notion.so/fengtongtong/5b9cd758d3e644b2918c49a206559e1c?v=64f05a444b53459d9f86c2409535345b" target="_blank" rel="nofollow noopener"><span>Notions</span></a> <i class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png"></i> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            本站总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+            人次,
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

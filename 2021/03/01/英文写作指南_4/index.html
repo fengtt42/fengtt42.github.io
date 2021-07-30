@@ -1,0 +1,604 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>论文写作技巧_4 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fengtt's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/statistics/">
+                <i class="iconfont icon-tags-fill"></i>
+                Statistics
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/friends/">
+                <i class="iconfont icon-friends"></i>
+                Friends
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/">
+                <i class="iconfont icon-comment"></i>
+                Contact
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="论文写作技巧_4">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-01 01:16" pubdate>
+        March 1, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      27
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">论文写作技巧_4</h1>
+            
+            <div class="markdown-body">
+              <h2 id="全文颜色说明"><a href="#全文颜色说明" class="headerlink" title="全文颜色说明"></a>全文颜色说明</h2><blockquote>
+<p><font color=red>red</font>代表与小标题相关的关键信息。<br><font color=blue>blue</font>代表与小标题无关的重要信息。<br><font color=green>green</font>代表自己归纳出的对自己很关键的信息。</p>
+</blockquote>
+<hr>
+<h2 id="18-避免一连串结构松散的句子"><a href="#18-避免一连串结构松散的句子" class="headerlink" title="18. 避免一连串结构松散的句子"></a>18. 避免一连串结构松散的句子</h2><p>结构松散的句子:由两个分句组成,第二个分句又由连词和关系引导词连接的句子.我们可能会写一整段这类句子,使用的连词主要有and,but,其次是用非限制性意思的关键词who,which,when,where,which.例如:</p>
+<blockquote>
+<p>The third concert of the subscription series was given last evening, <font color= red>and</font> a large audience was in attendance. Mr. Edward Appleton was the soloist, <font color= red>and</font> the Boston Symphony Orchestra furnished the instrumental music. The former showed himself to be an artist of the first rank,<font color= red> while</font> the latter proved itself fully deserving of its high reputation. The interest aroused by the series has been very gratifying to the Committee, <font color= red>and</font> it is planned to give a similar series annually hereafter. The fourth concert will be given on Tuesday, May 10, <font color= red>when</font> an equally attractive program will be presented.</p>
+</blockquote>
+<p>句子结构机械对称,且节奏单调.我们可以将其修改为简单句,由分号连接的简单句,两个分句连接的吊尾句,由三个分句连接的吊尾句.核心是改成最能代表思想的真实关系的句子.而不是为了复杂而复杂,为了长句而长句.</p>
+<blockquote>
+<p>I believe in aristocracy, though — if that is the right word, and if a democrat may use it. Not an aristocracy of power, based upon rank and influence, but an aristocracy of the sensitive, the considerate and the plucky. Its members are to be found in all nations and classes, and all through the ages, and there is a secret understanding between them when they meet. They represent the true human tradition, the one permanent victory of our queer race over cruelty and chaos. Thousands of them perish in obscurity, a few are great names. They are sensitive for others as well as for themselves, they are considerate without being fussy, their pluck is not swankiness but the power to endure, and they can take a joke.*</p>
+</blockquote>
+<hr>
+<h2 id="19-用相似的形式表达并列的意思"><a href="#19-用相似的形式表达并列的意思" class="headerlink" title="19. 用相似的形式表达并列的意思"></a>19. 用相似的形式表达并列的意思</h2><p>平行结构,要求在内容和功能上相似的表达形式外表相似.形式上的相似能够使读者比较容易的辨认出内容和功能的相似. 很多作者错误的认为他应该经常不断的变换表达形式,因此常常违背平行结构的规则.</p>
+<blockquote>
+<p>Formerly, science was taught by the textbook method, while now the laboratory method is employed.<br>Formerly, science was taught by the textbook method<font color = red>; </font>now it is taught by the laboratory method.</p>
+</blockquote>
+<hr>
+<p><strong>一组词语并列</strong><br>一组词语中各个词的冠词或者介词,<font color = blue>要么只在第一个词前使用,要么在每个词前面使用.</font></p>
+<blockquote>
+<p>the French, the Italians, the Spanish, and the Portuguese<br>in spring, summer, or winter (in spring, in summer, or in winter)</p>
+</blockquote>
+<hr>
+<p><strong>介词并列</strong><br>有些词在某些场景中需要特定的介词,当这些词在复合结构中连用时,<font color = blue>除非介词相同,否则必须把所有恰当的介词都表达出来</font>.</p>
+<blockquote>
+<p>His speech was marked by disagreement and scorn for his opponent’s position. (错误,介词缺失)<br>His speech was marked by <font color = red>disagreement with</font> and <font color = red>scorn for </font>his opponent’s position.</p>
+</blockquote>
+<hr>
+<p><strong>关系连词并列</strong><br>both,and; not,but; not only, but also; either, or; first, second, third等<font color = blue>后面应该是相同的语法结构</font>.</p>
+<blockquote>
+<p>It was both a long ceremony and very tedious.(错误, 一个是名词,一个是形容词)<br>The ceremony was both long and tedious.</p>
+</blockquote>
+<blockquote>
+<p>A time not for words but action.(错误, 一个是介词短语,一个是名词)<br>A time not for words but for action.(不是说而是干的时候)</p>
+</blockquote>
+<blockquote>
+<p>Either you must grant his request or incur his ill will.(错误,一个是独立句子,一个缺主语)<br>You must either grant his request or incur his ill will.</p>
+</blockquote>
+<blockquote>
+<p>My objections are, first, the injustice of the measure; second, that it is unconstitutional.(错误)<br>My objections are, first, that the measure is unjust; second, that it is unconstitutional.</p>
+</blockquote>
+<hr>
+<h2 id="20-把相关的词放在一起-避免歧义"><a href="#20-把相关的词放在一起-避免歧义" class="headerlink" title="20.把相关的词放在一起,避免歧义"></a>20.把相关的词放在一起,避免歧义</h2><p>句子中的各个词的位置表示相互关系的主要手段,位置不当就会导致混乱和产生歧义.其中最容易出错的是修饰语:<font color = red>修饰语的位置应该尽可能的靠近他们所修饰的词.</font></p>
+<blockquote>
+<p>He noticed a large stain in the rug<font color = blue> that was right in the center.</font>(歧义,污点在地毯中间,还是地毯在房子中间)<br>He noticed a large stain right in the center of the rug.</p>
+</blockquote>
+<blockquote>
+<p>You can call your mother in London and tell her all about George’s taking you out to dinner <font color = blue>for just two dollars.</font>(歧义:60美分花在什么地方)<br>For just two dollars you can call your mother in London and tell her all about George’s taking you out to dinner.(For短语是修饰call动词的,所以应该和直接动词位置更近)</p>
+</blockquote>
+<blockquote>
+<p>New York’s first commercial human-sperm bank opened Friday <font color = blue>with</font> semen samples from eighteen men <font color = blue>frozen in a stainless steel tank</font>.(歧义)<br>New York’s first commercial human- sperm bank opened Friday when semen samples were taken from eighteen men. The samples were then frozen and stored in a stainless steel tank.</p>
+</blockquote>
+<hr>
+<p><strong>先行词是一个词组</strong><br>先行词是一个词组,后面加一个关系词的从句,在很多时候很容易引起歧义.此时可以通过插入<font color = red>插入语 或 同位语</font> 的方式来将关系从句修饰的词进行明确.</p>
+<blockquote>
+<p>A proposal to amend the Sherman Act, which has been variously judged<br>A proposal, which has been variously judged, to amend the Sherman Act….(插入语限定修饰物,降低歧义)<br>The grandson of William Henry Harrison, who<br>William Henry Harrison’s grandson, Benjamin Harrison, who(同位语限定修饰人,降低歧义)</p>
+</blockquote>
+<hr>
+<p><strong>多个修饰词修饰同一个词</strong><br>多个修饰词修饰同一个词, 则应该将他们作恰当的排列,以免产生错误的修饰关系.</p>
+<blockquote>
+<p>She <font color = blue>only</font> found two mistakes.<br>She found <font color = blue>only</font> two mistakes.</p>
+</blockquote>
+<blockquote>
+<p>Major R. E. Joyce will give a lecture <font color = blued>on Tuesday evening in Bailey Hall</font>, to which the public is invited <font color = dablue>on “My Experiences in Mesopotamia”</font><font color = blue> at 8:00 P.M</font>.(3个修饰词都是修饰lecture的,所以位置应该离lecture近点)<br>On Tuesday evening at eight, Major R. E. Joyce will give a lecture in Bailey Hall on “My Experiences in Mesopotamia.” The public is invited.</p>
+</blockquote>
+<h2 id="21-概述时-自始至终始终用同一种时态"><a href="#21-概述时-自始至终始终用同一种时态" class="headerlink" title="21. 概述时,自始至终始终用同一种时态."></a>21. 概述时,自始至终始终用同一种时态.</h2><p>在概述一个剧本的情节,一首诗,一个故事，一个相关工作的时候,时态可以使用如下：<br>通常用<font color = blue>一般现在时</font>,则之前的情节使用<font color = blue>现在完成时</font>。<br>也可以用<font color = blue>一般过去时</font>，则之前的情节使用<font color = blue>过去完成时</font>。<br>其中，作者无论使用哪一种时态，都应该<font color = red>自始至终使用。</p>
+<p>特例：<br>概述时无论用哪一种时态，<font color = blue>间接引语和间接问句中的一般过去时保持不变</font>。</p>
+<blockquote>
+<p>直接引语”是指在文中直接引用自己或者别人的原话. 而“间接引语”是用自己的话转述别人的意思。<br>直接引语：小明说：“下雨了,我今天不到奶奶家去.”<br>间接引语：小明说下雨了,他今天不到奶奶家去.</p>
+</blockquote>
+<hr>
+<p><strong>相关工作写作</strong><br>时态：一般现在时<br>写法：先用一两句话简要的说明我们所论作品的主题和背景，然后可以引用很多细节阐明作品的特征。不要按照年代先后顺序逐一讨论，而是要一开始就确立总的结论，然后再阐述细节。</p>
+<hr>
+<h2 id="22-把一个句子中强调的词放在句尾"><a href="#22-把一个句子中强调的词放在句尾" class="headerlink" title="22. 把一个句子中强调的词放在句尾"></a>22. 把一个句子中强调的词放在句尾</h2><p>作者想要强调的词或词组，在句中最恰当的位置是句尾。</p>
+<blockquote>
+<p>Humanity has hardly advanced in fortitude since that time, though it has advanced in many other ways.<br>Since that time, humanity has advanced in many ways, but it has hardly advanced in fortitude.</p>
+</blockquote>
+<blockquote>
+<p>With these hopes and in this belief I would urge you, laying aside all hindrance, thrusting away all private aims, to devote yourself unswervingly and unflinchingly to the vigorous and successful prosecution of this war.</p>
+</blockquote>
+<hr>
+<p>句子中另一个强调的位置位于句首。句中除主语外，任一成分位于句首时，都受到强调。</p>
+<blockquote>
+<p>Deceit or treachery she could never forgive.</p>
+</blockquote>
+<hr>
+<p><font color=blue>总之，需要强调的部分最恰当的方式时在句尾。这条原则不仅适用于句子内部的词语排序，也适用于段落中的句子排序，更适用于文章中的段落排序。</p>
+<hr>
+<blockquote>
+<p><font size=5pt, color  = pink>如果有任何问题,欢迎留言探讨.如果对您有用,欢迎<font size=5pt, color  =LightSteelBlue  >点赞关注.<br><font size=3pt, color  = pink>如需转载,请注明出处:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_31813549/article/list/3">Tonny的博客</a><br> <html><br> <meta charset="utf-8"><br> <body bgcolor="red"><br> <p><br> <table border="1" width="700" height="30" bgcolor="red" align="center"><br> <tr bgcolor="red purple"><br> </tr><br> <tr bgcolor="green red"><br> <td><a href="https://blog.csdn.net/qq_31813549/article/details/111369266?utm_medium=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control" target=_blank>笔记1</a></td><br> <td><a href="https://blog.csdn.net/qq_31813549/article/details/111400578#comments_14285882" target=_blank >笔记2</a></td><br> <td><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_31813549/article/details/111469306?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-1.control">笔记3</a></td><br> <td><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_31813549/article/details/111469306?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-1.control" >笔记4</a></td><br> </tr><br> </table><br> </p><br> </body><br> </html></p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Paper/">Paper</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Paper/">Paper</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/01/%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97_2/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">论文写作技巧_2</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/01/%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97_5/">
+                        <span class="hidden-mobile">论文写作技巧_5</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://github.com/fengtt42/fengtt42.github.io" target="_blank" rel="nofollow noopener"><span>Github</span></a> <i class: "iconfont icon-github-fill"></i> <a href="https://blog.csdn.net/qq_31813549?spm=1011.2124.3001.5343" target="_blank" rel="nofollow noopener"><span>CSDN</span></a> <i class: "iconfont icon-github-fill"></i> <a href="https://www.notion.so/fengtongtong/5b9cd758d3e644b2918c49a206559e1c?v=64f05a444b53459d9f86c2409535345b" target="_blank" rel="nofollow noopener"><span>Notions</span></a> <i class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png"></i> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            本站总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+            人次,
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

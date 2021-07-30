@@ -18,7 +18,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>friends - Hexo</title>
+  <title>Windows10如何开放1935端口 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -34,6 +34,8 @@
     
   
 
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   
 
 
@@ -62,7 +64,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -197,9 +199,46 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="friends">
+            <span class="h2" id="subtitle" title="Windows10如何开放1935端口">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-07-01 01:16" pubdate>
+        July 1, 2020 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      363 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      3
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -212,40 +251,110 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<article class="page-content">
-  <h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Windows10如何开放1935端口</h1>
+            
+            <div class="markdown-body">
+              <h3 id="端口状态测试"><a href="#端口状态测试" class="headerlink" title="端口状态测试"></a>端口状态测试</h3><p>在cmd下执行以下命令:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 查看本机已经开通的全部端口</span><br>netstat -na<br><span class="hljs-meta">#</span><span class="bash"> 查看特定端口是否开放</span><br>telnet (本机的ipv4地址) 1935<br></code></pre></td></tr></table></figure>
 <ul>
-<li><strong>名称：</strong>你的博客名称</li>
-<li><strong>地址：</strong>你的博客地址</li>
-<li><strong>简介：</strong>一句话简介</li>
-<li><strong>头像：</strong>你的头像地址</li>
+<li>如果直接跳转到另一个界面(界面为黑屏),则端口开放；</li>
+<li>如果出现”无法打开到主机的连接.在端口 1935:连接失败”,则端口未开放;</li>
+<li>如果出现Telnet不是内部或者外部命令,这是因为Windows系统没有打开telnet功能,具体打开操作详见<a target="_blank" rel="noopener" href="https://www.cnblogs.com/byne-mn/p/10843108.html">telnet功能开放</a>(由于系统的版本更新问题,我测试的时候界面已经不一样了,但是基本操作一样,仔细找一下.)</li>
 </ul>
-<p>例如我的博客友链，大家可以加到自己博客里哦：</p>
-<ul>
-<li><strong>名称：</strong>godweiyang</li>
-<li><strong>地址：</strong><a target="_blank" rel="noopener" href="https://godweiyang.com/">https://godweiyang.com</a></li>
-<li><strong>简介：</strong>公众号【算法码上来】，分享深度学习与NLP算法</li>
-<li><strong>头像：</strong><a target="_blank" rel="noopener" href="https://godweiyang.com/medias/avatars/avatar.jpg">https://godweiyang.com/medias/avatars/avatar.jpg</a></li>
-</ul>
+<h3 id="开放端口"><a href="#开放端口" class="headerlink" title="开放端口"></a>开放端口</h3><h5 id="1-windows10通过左下角的搜索栏，搜索“windows防火墙”，跳转到以下界面"><a href="#1-windows10通过左下角的搜索栏，搜索“windows防火墙”，跳转到以下界面" class="headerlink" title="1. windows10通过左下角的搜索栏，搜索“windows防火墙”，跳转到以下界面"></a>1. windows10通过左下角的搜索栏，搜索“windows防火墙”，跳转到以下界面</h5><p><img src="https://img-blog.csdnimg.cn/20191030170639523.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxODEzNTQ5,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h5 id="2-点击左侧的“高级设置”，跳转到"><a href="#2-点击左侧的“高级设置”，跳转到" class="headerlink" title="2 点击左侧的“高级设置”，跳转到"></a>2 点击左侧的“高级设置”，跳转到</h5><p><img src="https://img-blog.csdnimg.cn/20191030170742845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxODEzNTQ5,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h5 id="3-点击左侧的“入站规则”，然后再点击右侧的”新建规则“，跳转到以下界面："><a href="#3-点击左侧的“入站规则”，然后再点击右侧的”新建规则“，跳转到以下界面：" class="headerlink" title="3 点击左侧的“入站规则”，然后再点击右侧的”新建规则“，跳转到以下界面："></a>3 点击左侧的“入站规则”，然后再点击右侧的”新建规则“，跳转到以下界面：</h5><p><img src="https://img-blog.csdnimg.cn/20191030170937827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxODEzNTQ5,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h5 id="4-选择端口，点击“下一步”，跳转至"><a href="#4-选择端口，点击“下一步”，跳转至" class="headerlink" title="4 选择端口，点击“下一步”，跳转至"></a>4 选择端口，点击“下一步”，跳转至</h5><p><img src="https://img-blog.csdnimg.cn/20191030171107486.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxODEzNTQ5,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h5 id="5-输入端口号1935，点击“下一步”，再点击“下一步”，跳转至"><a href="#5-输入端口号1935，点击“下一步”，再点击“下一步”，跳转至" class="headerlink" title="5 输入端口号1935，点击“下一步”，再点击“下一步”，跳转至"></a>5 输入端口号1935，点击“下一步”，再点击“下一步”，跳转至</h5><p><img src="https://img-blog.csdnimg.cn/2019103017124683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxODEzNTQ5,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h5 id="6-输入名称（随意），点击完成。"><a href="#6-输入名称（随意），点击完成。" class="headerlink" title="6 输入名称（随意），点击完成。"></a>6 输入名称（随意），点击完成。</h5><h5 id="7-打开cmd窗口，输入“telnet-IPv4地址-1935”测试，此时端口已经开通了。"><a href="#7-打开cmd窗口，输入“telnet-IPv4地址-1935”测试，此时端口已经开通了。" class="headerlink" title="7 打开cmd窗口，输入“telnet (IPv4地址) 1935”测试，此时端口已经开通了。"></a>7 打开cmd窗口，输入“telnet (IPv4地址) 1935”测试，此时端口已经开通了。</h5><blockquote>
+<p>如果还没有开通，可以重启电脑，因为系统反应真的比较慢。至少我测试的时候是这样的。</p>
+</blockquote>
+<p>》如有任何问题，欢迎留言。</p>
 
-
-  
-</article>
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Network/">Network</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Network/">Network</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/01/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7_1/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">论文写作技巧_1</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/01/python-string%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/">
+                        <span class="hidden-mobile">python-string方法总结</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -349,7 +458,11 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
 
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
 
 
 

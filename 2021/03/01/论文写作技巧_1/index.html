@@ -1,0 +1,672 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>论文写作技巧_1 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fengtt's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/statistics/">
+                <i class="iconfont icon-tags-fill"></i>
+                Statistics
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/friends/">
+                <i class="iconfont icon-friends"></i>
+                Friends
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/">
+                <i class="iconfont icon-comment"></i>
+                Contact
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="论文写作技巧_1">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-01 01:16" pubdate>
+        March 1, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      29
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">论文写作技巧_1</h1>
+            
+            <div class="markdown-body">
+              <h2 id="全文颜色说明"><a href="#全文颜色说明" class="headerlink" title="全文颜色说明"></a>全文颜色说明</h2><blockquote>
+<p><font color=red>red</font>代表与小标题相关的关键信息。<br><font color=blue>blue</font>代表与小标题无关的重要信息。<br><font color=green>green</font>代表自己归纳出的对自己很关键的信息。</p>
+</blockquote>
+<hr>
+<h2 id="1-所有单数名词的所有格都是加-‘s。"><a href="#1-所有单数名词的所有格都是加-‘s。" class="headerlink" title="1.所有单数名词的所有格都是加 ‘s。"></a>1.所有单数名词的所有格都是加 ‘s。</h2><p><strong>A.  名词所有格（名词表达所属关系）</strong><br><font color=blue>‘s 所有格</font>和<font color=blue>of 所有格</font>是<font color=blue>名词表达所属关系</font>的两种结构。这两种结构有时可以通用，’s 所有格的应用范围更广。<br><font color=red>所有单数名词的所有格都是加 ‘s</font>,无论单数名词最后以什么辅音字母结尾，其所有格必须加 ‘s，而不是单纯的使用<font color=red>‘</font>。所有复数名词的所有格都是加 ‘。所有单数名词的所有格都是加 ‘s</p>
+<blockquote>
+<p>Burns’s friend<br>the witch’s malice</p>
+</blockquote>
+<p>特例是以-es或者-is结尾的古代专有名词或者古代习惯用语。</p>
+<blockquote>
+<p>Moses’ Laws(摩西律法)<br>Isis’ temple(爱色斯神殿)<br>jesus’<br>for conscience’ sake(为了良心)<br>for righterousness’ sake(为了正义)</p>
+</blockquote>
+<p>这些特例，可以转变为of所有格</p>
+<blockquote>
+<p>the laws of Mases<br>the temple of Isis</p>
+</blockquote>
+<hr>
+<p><strong>B. 物主代词（代词表达所属关系）</strong></p>
+<p>| 代词| 类别|一|二|三|三|三|一|二|三|<br>|–|–|–|–|–|–|–|–|–|–|–|–|<br>|人称代词| 主格 |I|you|he|she|it|we|you|they|<br>|人称代词|宾格|me|you|him|her|it|us|you|them|<br>|物主代词|形容词性物主代词|my|your|his|her|its|our|your|their|<br>|物主代词|名词性物主代词|mine|yours|his|hers|its|ours|yours|theirs|</p>
+<blockquote>
+<p><font color=red>He</font> has a camera. The camera belongs to <font color=red>him</font>. It is <font color=red>his </font>camera. The camera is <font color=red>his</font>.<br> <font color=red>She</font> has a diamond ring. The diamond ring belongs to <font color=red>her</font>. It is <font color=red>her</font> diamond ring. The diamond ring is <font color=red>hers</font>.<br><font color=red>They</font> have a tea garden. The tea garden belongs to <font color=red>them</font>. It is <font color=red>their </font>tea garden. The tea garden is <font color=red>theirs</font>.</p>
+</blockquote>
+<hr>
+<p><strong>C. 不定代词表达所属关系</strong><br>不定代词需要用 <font color=red>$’s$</font>表示所属关系。</p>
+<blockquote>
+<p>one’s right  (某人的权力)<br>somebody else’s umbrella  (别人的雨伞)</p>
+</blockquote>
+<hr>
+<p><strong>D. 名词所有格和物主代词的关系</strong></p>
+<blockquote>
+<p>名词所有格和物主代词都是用于表示所属关系，区别在于1个需要用’s或者of进行限定(Burns’s friend, the laws of Mases)，而另一个不需要(my, your, its, their, our)。</p>
+</blockquote>
+<hr>
+<p><strong>E. 形容词性物主代词的2种变体its own和itself</strong></p>
+<blockquote>
+<p>its own——做定语：The dog has lost its own mother.<br>itself——做宾语： The dog is playing with itself.<br>itself——–做状语：The dog is playing by itself.<br>itself——做同位语：The dog itself is lying on its own back in its own house. </p>
+</blockquote>
+<hr>
+<h2 id="2-由一个连词连接的三个或者三个以上的一组词语中，除最后一个外，其余的每个词语后面都需要用逗号分开。"><a href="#2-由一个连词连接的三个或者三个以上的一组词语中，除最后一个外，其余的每个词语后面都需要用逗号分开。" class="headerlink" title="2. 由一个连词连接的三个或者三个以上的一组词语中，除最后一个外，其余的每个词语后面都需要用逗号分开。"></a>2. 由一个连词连接的三个或者三个以上的一组词语中，除最后一个外，其余的每个词语后面都需要用逗号分开。</h2><blockquote>
+<p>red, white<font color=red>, and</font> blue<br>He opened the letter, read it<font color=red>, and</font> made a note of its contents.</p>
+</blockquote>
+<hr>
+<h2 id="3-插入语应该位于两个逗号之间。"><a href="#3-插入语应该位于两个逗号之间。" class="headerlink" title="3. 插入语应该位于两个逗号之间。"></a>3. 插入语应该位于两个逗号之间。</h2><p>插入语可以位于句子的前面，中间，后面。如果在句子中间的时候，应该位于两个逗号之间。例如：</p>
+<blockquote>
+<p>The best way to see a country<font color=red>, unless</font> you are pressed for time<font color=red>,  is</font> to travel on foot.</p>
+</blockquote>
+<p>这条规则不易应用，因为常常很难确定一个词或者一个短语是否是插入语。如果插入的词语仅轻微的终端句子的行文，作者完全可以省略其前后的两个逗号。但是无论中断行文的程度如何，<font color=blue>绝不可以省略一个而保留另一个。</font>例如：</p>
+<blockquote>
+<p>Mary’s husband, Nelson paid us a visit yesterday.(错误的表达)</p>
+</blockquote>
+<hr>
+<p><strong>A. 插入语是什么？</strong><br><font color=green>插入语是对主句起补充说明作用的，而非限定作用的(缩小范围)，可以和主句拆分为2个独立的句子。</p>
+<blockquote>
+<p>People sitting in the rear couldn’t hear.<br>Uncle Bert, being slight deaf, moved forward.<br>My cousin Bob is talented harpist.<br>Our oldest daughter, Mary, sings.</p>
+</blockquote>
+<hr>
+<p><strong>B. 常见的插入语有哪些？</strong></p>
+<ol>
+<li>形容词或形容词短语作插入语<br>sure enough果然， worse still更糟糕的是， true真的， funny真可笑， strange to say说也奇怪， needless to say不用说， most important of all最为重要的是等。<blockquote>
+<p>He,  sure enough, came out with all the news we wanted.</p>
+</blockquote>
+</li>
+<li>副词或副词短语作插入语<br>certainly(当然)，surely(无疑)，indeed(的确)，however(然而)，fortunately(幸运的是)，luckily(幸运的是)，probably(大概)，personally(就个人来讲)等。<blockquote>
+<p>Yes, indeed, I intend to go.</p>
+</blockquote>
+</li>
+<li>介词短语用作插入语<br>in fact(事实上)，in one’s opinion(在某人看来)，of course(当然)，above all /first of all (首先)，by the way (顺便)，in short（简言之）等。<blockquote>
+<p>You have to admit that you are, in fact, in difficulties.</p>
+</blockquote>
+</li>
+<li>现在分词短语作插入语<br>generally speaking(一般来讲)，generally considering(一般认为)，strictly speaking(严格地说)，judging from/by (根据……来判断)，considering……等。<blockquote>
+<p>It was, strictly speaking, my duty.</p>
+</blockquote>
+</li>
+<li>过去分词短语作插入语<blockquote>
+<p>Painted white, we like the house better.<br>之所以称它为插入语，是由于这种过去分词是独立的，没有逻辑主语。</p>
+</blockquote>
+</li>
+<li>不定式作插入语<br>to be frank(坦率地说)，to tell(you )the truth(老实说)，to be sure(当然)，so to speak(可以说)等。<blockquote>
+<p>To be frank, he could also be a bit of a bore.</p>
+</blockquote>
+</li>
+<li>从句作插入语<br>if so / not / any, if I may say so, if you don’t mind, as you know, as you say 等.<blockquote>
+<p>This man, as you know, is good for nothing.<br><font color = green>插入语可以是一个完整的句子。</font></p>
+</blockquote>
+</li>
+<li>分句作插入语<br>I think(我认为)，I hope (我希望)，I’m afraid(恐怕)，What’s more(而且)，What’s worse(更糟的是)，You see (你清楚)等。<blockquote>
+<p>The old man, it is said, was an artist but people hardly know anything about this side of his life.</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<p><strong>C. 日期中的数字作为插入语</strong></p>
+<blockquote>
+<p>February to July, 2019<br>July 6, 2019<br>Wednesday, July 6, 2019<br>July 2019</p>
+</blockquote>
+<hr>
+<p><strong>D. 缩写词作为插入语</strong><br>缩写词etc.(等等)， i.e.(即是,等价于that is)， 和e.g.(例如)，Ph.D.等。</p>
+<blockquote>
+<p>Letter, packets, etc., shoud go here.</p>
+</blockquote>
+<hr>
+<p><strong>E. 非限制性定语从句作为插入语</strong></p>
+<blockquote>
+<p>The audience, which had at first been indifferent, became more and more interested.</p>
+</blockquote>
+<p>在这些句子中，由which, when, where引导的都是非限制性从句，他们不起限制性作用，仅仅起到补充作用。which引导的从句并非用来指明哪些观众，而是补充叙述这件事，这个现象。</p>
+<blockquote>
+<p>The audience who had at first been indifferent became more and more interested.</p>
+</blockquote>
+<p>这个who引导的从句用来限定哪些观众。<font color = blue>限定性从句不是插入语，不能用逗号隔开</font>。</p>
+<hr>
+<h2 id="4-引导独立分句的连词前需要加逗号。"><a href="#4-引导独立分句的连词前需要加逗号。" class="headerlink" title="4. 引导独立分句的连词前需要加逗号。"></a>4. 引导独立分句的连词前需要加逗号。</h2><p>一个句子由2个分句组成，如果第二个分句由连词(and, but等)，as, for, nor, while引导，连词前面需要用逗号分开。</p>
+<blockquote>
+<p>The early records of the city have disappeared<font color = red>, and</font> the story of its first years can no longer be reconstructed.</p>
+</blockquote>
+<hr>
+<p>如果一个插入语（一个从句或者一个需要逗号分开的引导性短语）位于第二个独立分句之前，则<font color = blue>连词后不需要逗号。</p>
+<blockquote>
+<p>The situation is perilous, <font color = red>but if</font> we are prepared to act promptly, there is still one chance of escape.<br>if we are prepared to act promptly这个从句位于第二个独立分句there is still one chance of escape之前，根据插入语的特点，此时从句前后均需要逗号，但此时前面的逗号省略。</p>
+</blockquote>
+<hr>
+<p>当2个分句的主语相同并且只出现一次时候，连词but前逗号不可以省略；但连词and连接的前后两部分关系紧密时，可以省去逗号。</p>
+<blockquote>
+<p>I have heard his arguments, but am still unconvinced.<br>He has had several years’ experience and is thoroughly competent.<br><font color = green>注：连词连接的2个分句，即使主语和谓语相同，但仅可以删去第二个分句的主语，其谓语必须保留</font></p>
+</blockquote>
+<hr>
+<h2 id="5-不要用逗号连接独立分句，建议用分号。"><a href="#5-不要用逗号连接独立分句，建议用分号。" class="headerlink" title="5. 不要用逗号连接独立分句，建议用分号。"></a>5. 不要用逗号连接独立分句，建议用分号。</h2><p>两个或者两个以上，语法上面完整且不用连词连接的分句构成一个并列的复合句时，用<font color = red>分号</font>连接比较恰当。</p>
+<blockquote>
+<p>It is nearly half past five<font color = red>; we</font> cannot reach town before dark.</p>
+</blockquote>
+<p>其实这个句子也可以用连词连接，但这用分号连接更加简洁，有力。</p>
+<blockquote>
+<p>It is nearly half past five<font color = red>, and</font> we cannot reach town before dark.</p>
+</blockquote>
+<hr>
+<p>如果第二个分句之前不是连接词，而是副词，如：accordingly(相应的，从而)、besides(而且，此外)、then(然而)、thereforce(因此)和thus(因而)，用<font color = red>分号</font>连接比较恰当。</p>
+<blockquote>
+<p>I had never been in the space before<font color = red>; it</font> was dark as a tomb.</p>
+</blockquote>
+<hr>
+<p><font color = red>特例：</font><br>如果各个分句都很短且形式相似，或者整个句子的语气比较随便，则可以用逗号。</p>
+<blockquote>
+<p>Man proposes, God disposes.(谋事在人，成事在天)<br>Here today, gone tomorow.(来也匆匆，去也匆匆)<br>I hardly knew him, he was so changed.(很口语化)</p>
+</blockquote>
+<hr>
+<h2 id="6-不要把句子拆成2半。"><a href="#6-不要把句子拆成2半。" class="headerlink" title="6. 不要把句子拆成2半。"></a>6. 不要把句子拆成2半。</h2><p>应该用逗号时不要用句号。</p>
+<blockquote>
+<p>I met them on a liner many years ago. Coming home from Liverpool to New York.<br>I met them on a liner many years ago, coming home from Liverpool to New York.</p>
+</blockquote>
+<p>允许把一个强调的词或者词组用作句子，并相应的用句号结尾。</p>
+<blockquote>
+<p>Again and again he called out. No reply.</p>
+</blockquote>
+<p>规则3，4，5，6是如何断句、结句最重要的原则。</p>
+<hr>
+<blockquote>
+<p><font size=5pt, color  = pink>如果有任何问题,欢迎留言探讨.如果对您有用,欢迎<font size=5pt, color  =LightSteelBlue  >点赞关注.<br><font size=3pt, color  = pink>如需转载,请注明出处:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_31813549/article/list/3">Tonny的博客</a><br> <html><br> <meta charset="utf-8"><br> <body bgcolor="red"><br> <p><br> <table border="1" width="700" height="30" bgcolor="red" align="center"><br> <tr bgcolor="red purple"><br> </tr><br> <tr bgcolor="green red"><br> <td><a href="https://blog.csdn.net/qq_31813549/article/details/111369266?utm_medium=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control" target=_blank>笔记1</a></td><br> <td><a href="https://blog.csdn.net/qq_31813549/article/details/111400578#comments_14285882" target=_blank >笔记2</a></td><br> <td><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_31813549/article/details/111469306?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-1.control">笔记3</a></td><br> <td><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_31813549/article/details/111469306?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-1.control" >笔记4</a></td><br> </tr><br> </table><br> </p><br> </body><br> </html></p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Paper/">Paper</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Paper/">Paper</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/01/%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97_5/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">论文写作技巧_5</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/01/Windows10%E5%A6%82%E4%BD%95%E5%BC%80%E6%94%BE1935%E7%AB%AF%E5%8F%A3/">
+                        <span class="hidden-mobile">Windows10如何开放1935端口</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://github.com/fengtt42/fengtt42.github.io" target="_blank" rel="nofollow noopener"><span>Github</span></a> <i class: "iconfont icon-github-fill"></i> <a href="https://blog.csdn.net/qq_31813549?spm=1011.2124.3001.5343" target="_blank" rel="nofollow noopener"><span>CSDN</span></a> <i class: "iconfont icon-github-fill"></i> <a href="https://www.notion.so/fengtongtong/5b9cd758d3e644b2918c49a206559e1c?v=64f05a444b53459d9f86c2409535345b" target="_blank" rel="nofollow noopener"><span>Notions</span></a> <i class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png"></i> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            本站总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+            人次,
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
