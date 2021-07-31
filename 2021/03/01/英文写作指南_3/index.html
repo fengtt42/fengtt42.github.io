@@ -449,19 +449,18 @@
                   
                 
                 
-  <div id="gitalk-container"></div>
+  <div id="valine"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js', function() {
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
         var options = Object.assign(
-          {"clientID":"6e4e65b75584b840fb4d","clientSecret":"f5dda2826cb2d266e98c5353b965933b7b686172","repo":"https://github.com/fengtt42/fengtt42.github.io","owner":"fengtt42","admin":["fengtt42"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {"appId":"S9hnaFX3hQUTUSeWQiszPX4f-MdYXbMMI","appKey":"SM2tsIPtii7tJJHkFDbT3SeK","placeholder":"说点什么吧quq","path":"window.location.pathname","avatar":"mp","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[],"appid":"S9hnaFX3hQUTUSeWQiszPX4f-MdYXbMMI","appkey":"SM2tsIPtii7tJJHkFDbT3SeK","notify":true,"verify":true},
           {
-            id: '27a00092c676fd597209de4218f1c972'
+            el: "#valine",
+            path: window.location.pathname
           }
         )
-        var gitalk = new Gitalk(options);
-        gitalk.render('gitalk-container');
+        new Valine(options);
       });
     });
   </script>
