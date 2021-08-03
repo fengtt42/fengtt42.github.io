@@ -1,0 +1,598 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/media/acatars/favicon.png">
+  <link rel="icon" href="/media/acatars/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="FTT">
+  <meta name="keywords" content="">
+  
+  <title>python-string方法总结 - Fengtt&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/media/acatars/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 50vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fengtt's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/statistics/">
+                <i class="iconfont icon-tags-fill"></i>
+                Statistics
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-friends"></i>
+                Friends
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/">
+                <i class="iconfont icon-comment"></i>
+                Contact
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/media/post_banner/python/p-25.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.1)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="python-string方法总结">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      FTT
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-01 01:16" pubdate>
+        March 1, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      35
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">python-string方法总结</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：August 3, 2021 am
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="Sequence-Types"><a href="#Sequence-Types" class="headerlink" title="Sequence Types"></a>Sequence Types</h2><ol>
+<li><p>sequence类型有六种：strings、byteobjects、bytearrays、lists、tuples、range objects</p>
+</li>
+<li><p>sequence类型都支持的通用操作：</p>
+</li>
+</ol>
+<ul>
+<li>成员检查：in、not in</li>
+<li>连接：+</li>
+<li>复制：*</li>
+<li>下标取值：s[i]</li>
+<li>切片：s[i: j]</li>
+<li>长度检查：len(s)</li>
+<li>最小值：min(s)</li>
+<li>最大值：max(s)</li>
+<li>索引取值：s.index(i)</li>
+<li>字符串统计：s.count(i)</li>
+</ul>
+<h2 id="String-Methods"><a href="#String-Methods" class="headerlink" title="String Methods"></a>String Methods</h2><h4 id="判断-amp-删除类方法"><a href="#判断-amp-删除类方法" class="headerlink" title="判断&amp;删除类方法"></a>判断&amp;删除类方法</h4><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">str</span>.endswith(suffix[,start[,end]])：      判断字符串是否以指定后缀结尾，返回<span class="hljs-literal">True</span>或<span class="hljs-literal">False</span>。start和end指定判断的起始范围，默认全字符串。<br><span class="hljs-built_in">str</span>.startwith(prefix[, start[,end]])：    判断字符串是否以指定前缀开头，返回<span class="hljs-literal">True</span>或<span class="hljs-literal">False</span>。start和end指定判断的起始范围，默认全字符串。<br><span class="hljs-built_in">str</span>.islower()：                           判断字符串中的字母字符是否全部为小写，该方法仅判断字符串中的字母字符，不理会其它字符。字符串必须至少包含一个字母字符，否则返回<span class="hljs-literal">False</span>。<br><span class="hljs-built_in">str</span>.isupper()：                           判断字符串中的字母字符是否全部为大写，该方法仅判断字符串中的字母字符，不理会其它字符。字符串必须至少包含一个字母字符，否则返回<span class="hljs-literal">False</span>。<br><span class="hljs-built_in">str</span>.istitle()：                           判断字符串每个单词（以空格分割）的首字母是否大写。字符串必须至少包含一个字母字符，否则返回<span class="hljs-literal">False</span>。即使首字母字符前面有非字母字符，如中文、数字、下划线等，也不影响对首字母字符的判断。<br><span class="hljs-built_in">str</span>.isalnum()：                           判断字符串是否只包含由文字数字式字符，字符串仅包含中文字符合法。若字符串包含空格、下划线、~等非文字数字式字符，均返回<span class="hljs-literal">False</span>。<br><span class="hljs-built_in">str</span>.isalpha()：                           判断字符串是否只包含文字字符，字符串仅包含中文字符合法。<br><span class="hljs-built_in">str</span>.isidentifier()：                      判断字符串是否是合法的标识符，实际上这里判断的是变量名是否合法（以字母或下划线开头）。<br><span class="hljs-built_in">str</span>.isprintable()：                       判断字符串所包含的字符是否全部可打印。字符串包含不可打印字符，如转义字符<br><span class="hljs-built_in">str</span>.isspace()：                           判断字符串是否仅包含空格或制表符。<br><span class="hljs-built_in">str</span>.isdecimal()：                         判断字符串是否只包含十进制数字字符，包括多国语言的十进制数字字符表现形式。<br><span class="hljs-built_in">str</span>.isdigit()：                           判断字符串是否只包含数字，这里的数字包括十进制数字和其它特殊数字（如上标数字等）。<br><span class="hljs-built_in">str</span>.isnumeric()：                         判断字符串是否只包含数字字符。数字字符范围很大。在判断是否只包含数字中，范围最大。<br><span class="hljs-built_in">str</span>.lstrip([chars])：                     返回一个去除前导字符的新字符串，chars参数是一个字符串，它包含了所有将要被移除的字符集合。默认为空格。从原字符串的最左边开始，匹配chars里包含的所有字符，直至遇到第一个非chars字符为止，原字符串中匹配到的所有字符都被移除。<br><span class="hljs-built_in">str</span>.rstrip([chars])：                     与<span class="hljs-built_in">str</span>.lstrip()相反，从最右边开始匹配。<br><span class="hljs-built_in">str</span>.strip([chars])：                      从字符串的两头开始匹配。<br><span class="hljs-built_in">str</span>.zfill(width)：                        返回一个长度为width的数字字符串，最左边填充<span class="hljs-number">0</span>。如果width小于等于原字符串长度，则返回原字符串。主要用于数字类字符串的格式化。<br></code></pre></div></td></tr></table></figure>
+
+
+
+<h4 id="变换-amp-对齐类方法"><a href="#变换-amp-对齐类方法" class="headerlink" title="变换&amp;对齐类方法"></a>变换&amp;对齐类方法</h4><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">str</span>.encode(encoding=”utf-<span class="hljs-number">8</span>”, errors=”strict”)：格式化类方法，返回一个格式化的新字符串：<br><span class="hljs-built_in">str</span>.lower()：                                  把全部字母字符转换成小写，不去管其它非字母字符。并返回原字符串<br><span class="hljs-built_in">str</span>.upper()：                                  把全部字母字符转换成大写。不去管其它非字母字符。并返回原字符串<br><span class="hljs-built_in">str</span>.swapcase()：                               把字符串中的大小写字母互换，大写转换成小写，小写转换成大写。不去管非字母类字符。<br><span class="hljs-built_in">str</span>.capitalize()：                             字符串首字母大写，其余小写。如果字符串首字符为非字母字符，将不变。<br><span class="hljs-built_in">str</span>.title()：                                  字符串中每个单词的首字母大写，其余小写。单词的首字符为非字母字符也转换。<br><span class="hljs-built_in">str</span>.center(width[,fillchar])：                 返回一个原字符串居中，长度为width的新字符串，width要大于<span class="hljs-built_in">len</span>(<span class="hljs-built_in">str</span>)，否则返回原字符串，原字符串开头和结尾处使用fillchar进行填充（优先前面），默认为空格。<span class="hljs-string">&#x27;abcd&#x27;</span>.center(<span class="hljs-number">8</span>）或<span class="hljs-string">&#x27;abcd&#x27;</span>.center(<span class="hljs-number">8</span>, *)<br><span class="hljs-built_in">str</span>.ljust(width[,fillchar])：                  返回一个长度为width，左对齐的字符串，最右边填充fillchar，默认为空格。width要大于<span class="hljs-built_in">len</span>(<span class="hljs-built_in">str</span>)，否则返回原字符串。<br><span class="hljs-built_in">str</span>.rjust(width[,fillchar])：                  返回一个长度为width，右对齐的字符串，最左边填充fillchar，默认为空格。width要大于<span class="hljs-built_in">len</span>(<span class="hljs-built_in">str</span>)，否则返回原字符串。<br></code></pre></div></td></tr></table></figure>
+
+
+<h4 id="查找-amp-替换类方法"><a href="#查找-amp-替换类方法" class="headerlink" title="查找 &amp; 替换类方法"></a>查找 &amp; 替换类方法</h4><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">str</span>.count(sub[,start[,end]])：                 统计某个字符中子字符串sub的个数。start和end指定统计范围，未指定则默认全字符串范围内统计。<br><span class="hljs-built_in">str</span>.find(sub[,start[,end]])：                  查找子字符串在字符串中出现的第一个位置，start和end指定一个查找范围。未找到返回-<span class="hljs-number">1</span>。如果仅想判断子字符串是否在某一字符串中，用<span class="hljs-keyword">in</span>判断符即可，无需find。<br><span class="hljs-built_in">str</span>.rfind(sub[,start[,end]])：                 跟find方法一样，返回指定子串的index位置，只不过rfind从字符串的最右边开始查找，找不到时返回-<span class="hljs-number">1</span>。注意：从最右边开始查找，但index位置却是从原字符串的最左边开始算的。<br><span class="hljs-built_in">str</span>.index(sub[,start[,end]])：                 类似<span class="hljs-built_in">str</span>.find()，但是如果没有找到子串，返回raised ValueError。<br><span class="hljs-built_in">str</span>.rindex(sub[, start[, end]])：              类似于<span class="hljs-built_in">str</span>.rfind()，但是如果没有找到，返回raises ValueError。<br><span class="hljs-built_in">str</span>.replace(old,new[,count])：                 返回一个新字符串，原串中的old被替换为new，country指定替换次数。<span class="hljs-string">&#x27;AAABBBCCC&#x27;</span>.replace(<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-string">&#x27;D&#x27;</span>, <span class="hljs-number">2</span>)   --&gt;DDABBBCCC<br><span class="hljs-built_in">str</span>.<span class="hljs-built_in">format</span>(*args,**kwargs)：                   调用fortmat方法的字符串中不但有纯文本，也有使用&#123;&#125;界定符包括起来的替换字段。替换字段既可以是位置参数的数值索引，也可以是字典或属性的Key值。该方法返回的字符串里，所有替换字段都被相应参数的值所替代。如：‘UserID: &#123;UID&#125;  Last login:&#123;last_login&#125;<span class="hljs-string">&#x27;.format(UID = ‘root&#x27;</span>,last_login= ‘5Mar <span class="hljs-number">2012</span><span class="hljs-string">&#x27;)   --&gt;User ID:root   Last login: 5Mar2012</span><br><span class="hljs-string">str.expandtabs([tabsize])：                    把字符串中的所有制表符替换成零个或多个空格，每个制表符替换成多少个空格，由制表符在字符串中的位置和tabsize共同决定。tabsize指定每个制表符替换成的空格数，默认为8个</span><br></code></pre></div></td></tr></table></figure>
+
+
+<h4 id="拆分-amp-组合类方法"><a href="#拆分-amp-组合类方法" class="headerlink" title="拆分 &amp; 组合类方法"></a>拆分 &amp; 组合类方法</h4><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">str</span>.partition(sep)：                           该方法用于拆分字符串，返回一个包含三个元素的元组。如果未能在原字符串中找到Sep，则元组的三个元素为：原字符串，空串，空串；否则，从原字符串中遇到的第一个Sep字符开始拆分，元组的三个元素为：Sep之前的字符串，Sep字符，Sep之后的字符串<br><span class="hljs-built_in">str</span>.rpartition(sep)：                          与<span class="hljs-built_in">str</span>.partition()相反，从原字符串的最右边开始拆分，但是同样返回包含三个元素的元组：倒数第一个Sep之前的字符串，Sep字符，Sep之后的字符串。<br><span class="hljs-built_in">str</span>.split([sep[,maxsplit]])：                  返回一个以Sep分隔的列表，maxsplit指定拆分次数（因此，列表中元素的个数为maxsplit + <span class="hljs-number">1</span>）。Sep默认为空格，maxsplit默认不限制拆分次数。如果未指定Sep或指定Sep为<span class="hljs-literal">None</span>（<span class="hljs-string">&#x27;&#x27;</span>），<span class="hljs-built_in">str</span>两端的空格将舍弃；如果指定Sep（不管能否在原字符串中找到Sep），<span class="hljs-built_in">str</span>两端的空格将保留<br><span class="hljs-built_in">str</span>.rsplit([sep[,maxsplit]])：                 与<span class="hljs-built_in">str</span>.split()类似，只是它从最右边开始拆分。只有在指定maxsplit的情况下才会看到效果。<br><span class="hljs-built_in">str</span>.splitlines([keepends])：                   拆分一个包含多行的字符串，以每行为一个元素返回一个列表。如果字符串不是多行的，则返回原字符串。keepends是一个<span class="hljs-literal">True</span>字符或非零整数，表示保留行尾标志。该方法多用于处理文件。Line.splitlines(<span class="hljs-literal">True</span>)   --&gt;[<span class="hljs-string">&#x27;AB\n&#x27;</span>,<span class="hljs-string">&#x27;CD\n&#x27;</span>, <span class="hljs-string">&#x27;EF&#x27;</span>]<br><span class="hljs-built_in">str</span>.join(iterable)：                           使用连接符<span class="hljs-built_in">str</span>来连接iterable对象中的元素，返回一个被<span class="hljs-built_in">str</span>连接起来的，由iterable对象的元素组成的字符串。如果传入一个非iterable对象，如整数、布尔值等，将返回<span class="hljs-type">Type</span> Error。sequencetype（六种：strings、byteobjects、bytearrays、lists、tuples、rangeobjects）和dictionary都属于iterable对象。<br></code></pre></div></td></tr></table></figure>
+<blockquote>
+<p>如有任何问题,欢迎留言.</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/python/">python</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/python/">python</a>
+                    
+                      <a class="hover-with-bg" href="/tags/string/">string</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/01/Windows10%E5%A6%82%E4%BD%95%E5%BC%80%E6%94%BE1935%E7%AB%AF%E5%8F%A3/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Windows10如何开放1935端口</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/01/%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97_3/">
+                        <span class="hidden-mobile">科技论文写作之标点符号（下）</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"FaDywmhlwL9g8YslF37OlNAz-MdYXbMMI","appKey":"NqWmTjkC1ip5N7yOrhvYkUbn","placeholder":"说点什么吧","path":"window.location.pathname","avatar":"mp","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[],"appid":"FaDywmhlwL9g8YslF37OlNAz-MdYXbMMI","appkey":"NqWmTjkC1ip5N7yOrhvYkUbn","notify":true,"verify":true},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-x-md">
+    <div class="container custom post-custom mx-auto">
+      <img src="https://octodex.github.com/images/jetpacktocat.png" srcset="/media/acatars/loading.gif" lazyload class="rounded mx-auto d-block mt-5" style="width:150px; height:150px;">
+    </div>
+  </div>
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://github.com/fengtt42/fengtt42.github.io/tree/master" target="_blank"><i class="iconfont icon-github-fill"></i></a>&nbsp <a href="https://blog.csdn.net/qq_31813549?spm=1011.2124.3001.5343" target="_blank"><i class="iconfont icon-brush"></i></a>&nbsp <a href="https://www.notion.so/fengtongtong/5b9cd758d3e644b2918c49a206559e1c?v=64f05a444b53459d9f86c2409535345b" target="_blank"><i class="iconfont icon-notebook"></i></a>&nbsp <a href="/media/reward/wechat.png" target="_blank"><i class="iconfont icon-wechat-fill"></i></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            The total number of hits is 
+            <span id="busuanzi_value_site_pv"></span>
+            ,
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            and the total number of visitors is 
+            <span id="busuanzi_value_site_uv"></span>
+            .
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
