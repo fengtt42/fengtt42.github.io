@@ -1,0 +1,622 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/media/acatars/favicon.png">
+  <link rel="icon" href="/media/acatars/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="python基础入门之List方法总结：1. 基本操作(构造, 增, 删, 查, 切片)；2. 高级操作(排序, 比较, 拆分合并, 过滤, 循环, 转置)；3.  高阶函数（map(), reduce(), filter(), sorted()）；4. 应用(队列, 堆栈, 链表)。">
+  <meta name="author" content="FTT">
+  <meta name="keywords" content="">
+  
+  <title>python基础入门之List方法总结 - Fengtt&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/media/acatars/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 50vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fengtt's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/statistics/">
+                <i class="iconfont icon-tags-fill"></i>
+                Statistics
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-friends"></i>
+                Friends
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/">
+                <i class="iconfont icon-comment"></i>
+                Contact
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/media/post_banner/python/p-2.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.1)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="python基础入门之List方法总结">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      FTT
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-12-21 10:59" pubdate>
+        December 21, 2020 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      23
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">python基础入门之List方法总结</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：December 21, 2020 am
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="1-基本操作-构造-增-删-查-切片"><a href="#1-基本操作-构造-增-删-查-切片" class="headerlink" title="1. 基本操作(构造,增,删,查,切片)"></a>1. 基本操作(构造,增,删,查,切片)</h2><div class="note note-success">
+            <p>A. <strong>构造</strong></p><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python">list1=[]                                <br>list1=[<span class="hljs-string">&quot;12s&quot;</span>,<span class="hljs-number">1</span>,<span class="hljs-number">25.3</span>,[<span class="hljs-number">2</span>,<span class="hljs-number">4</span>]]              <span class="hljs-built_in">list</span>中的数据类型多种多样<br>L=<span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>,<span class="hljs-number">10</span>,<span class="hljs-number">2</span>))                   构造连续元素的<span class="hljs-built_in">list</span><br>L=L1  或者 L=L1[:]                      列表的赋值<br>[k + <span class="hljs-string">&#x27;=&#x27;</span> + v <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> d.items()]     列表生成式进行构造 一个函数一个序列，函数作用于序列，生成一个序列<br>[m + n <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> <span class="hljs-string">&#x27;ABC&#x27;</span> <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> <span class="hljs-string">&#x27;XYZ&#x27;</span>]   列表生成式进行构造（从左往右）<br></code></pre></div></td></tr></table></figure><p>List的第一个元素的下标为0 或 -len(list)<br>List的最后一个元素的下标为len(list)-1 或 -1</p>
+          </div>
+
+<div class="note note-info">
+            <p>B. <strong>增加</strong></p><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">list</span>.append(obj)：      在列表末尾添加新的元素<br><span class="hljs-built_in">list</span>.insert(index,obj)：将元素插入某一位置之前，如果index大于<span class="hljs-built_in">list</span>的长度，最后加。如果index小于<span class="hljs-number">0</span>，最开始加<br>list1.extend(list2)：   在列表末尾一次性追加另一个序列<br>list1=list1+list2       在列表末尾一次性追加另一个序列<br>list1=list1*n           在列表末尾一次性追加n-<span class="hljs-number">1</span>个当前序列<br></code></pre></div></td></tr></table></figure>
+          </div>
+<div class="note note-success">
+            <p>C. <strong>删除</strong></p><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">list</span>.pop()：            移除列表中的最后一个元素，并且返回该元素的值<br><span class="hljs-built_in">list</span>.pop(index)：       移除列表中下表为index的元素，并且返回该元素的值<br><span class="hljs-built_in">list</span>.remove(obj)：      移除列表中某个值的第一个匹配项<br><span class="hljs-keyword">del</span> L[<span class="hljs-number">0</span>]或<span class="hljs-keyword">del</span> L[<span class="hljs-number">2</span>:<span class="hljs-number">3</span>]    删除指定下标范围的元素<br></code></pre></div></td></tr></table></figure>
+          </div>
+<div class="note note-info">
+            <p>D. <strong>查找</strong></p><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">len</span>(<span class="hljs-built_in">list</span>)：             统计列表中元素个数 <br><span class="hljs-built_in">list</span>.count(obj)：       统计某个元素在列表中出现的次数<br><span class="hljs-built_in">max</span>(<span class="hljs-built_in">list</span>)：             返回列表元素最大值 <br><span class="hljs-built_in">min</span>(<span class="hljs-built_in">list</span>)：             返回列表元素最小值 <br><span class="hljs-built_in">list</span>.index(obj)：       从列表中找出某个值第一个匹配项的索引位置<br>obj <span class="hljs-keyword">in</span> list1            判断对象是否在列表中，是一个<span class="hljs-built_in">bool</span>类型<br></code></pre></div></td></tr></table></figure>
+          </div>
+<div class="note note-success">
+            <p>E. <strong>切片与强制转化</strong></p><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">list</span>(seq)：                  将元组转换为列表 <br>L=L[n:]  L=L[:m]  L=L[n:m:<span class="hljs-number">3</span>]  L=L[::<span class="hljs-number">2</span>] 列表的切片（同样适用于字符串）<br></code></pre></div></td></tr></table></figure>
+          </div>
+<h2 id="2-高级操作-排序-比较-拆分合并-过滤-循环-转置"><a href="#2-高级操作-排序-比较-拆分合并-过滤-循环-转置" class="headerlink" title="2. 高级操作(排序,比较,拆分合并,过滤,循环,转置)"></a>2. 高级操作(排序,比较,拆分合并,过滤,循环,转置)</h2> <div class="note note-info">
+            <p> A. <strong>排序</strong></p><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">list</span>.reverse()==<span class="hljs-built_in">list</span>[::-<span class="hljs-number">1</span>]： 逆序，反向列表中元素<br><span class="hljs-built_in">list</span>.sort([func])：          对原列表进行排序    reverse==<span class="hljs-literal">True</span>时，按降序排列<br></code></pre></div></td></tr></table></figure>
+          </div>
+ <div class="note note-success">
+            <p> B. <strong>比较</strong></p><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python">cmp(list1,list2)：           比较两个列表的元素，返回一个true/false的列表<br></code></pre></div></td></tr></table></figure>
+          </div>
+ <div class="note note-info">
+            <p> C. <strong>字符串的拆分与合并</strong></p><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">list</span>=s.split(<span class="hljs-string">&quot;;&quot;</span>,<span class="hljs-number">1</span>)          字符串的split()将其按“;”分割成<span class="hljs-built_in">list</span>，split 接受一个可选的第二个参数, 它是要分割的次数<br>s = <span class="hljs-string">&quot;;&quot;</span>.join(<span class="hljs-built_in">list</span>) join()    方法将<span class="hljs-built_in">list</span>合成一个字符串，以“;”划分，返回一个字符串<br></code></pre></div></td></tr></table></figure>
+          </div>
+ <div class="note note-success">
+            <p> D. <strong>过滤</strong></p><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python">[elem <span class="hljs-keyword">for</span> elem <span class="hljs-keyword">in</span> list1 <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(elem) &gt; <span class="hljs-number">1</span>]      过滤长度大于<span class="hljs-number">0</span>的元素<br>[elem <span class="hljs-keyword">for</span> elem <span class="hljs-keyword">in</span> list1 <span class="hljs-keyword">if</span> elem != <span class="hljs-string">&quot;b&quot;</span>]        过滤长度不等于“b”的元素<br>[elem <span class="hljs-keyword">for</span> elem <span class="hljs-keyword">in</span> list1 <span class="hljs-keyword">if</span> list1.count(elem) == <span class="hljs-number">1</span>] 过滤不重复的元素<br></code></pre></div></td></tr></table></figure>
+          </div>
+ <div class="note note-info">
+            <p> E. <strong>循环</strong></p><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python">&lt;span style=<span class="hljs-string">&quot;color:#000000&quot;</span>&gt;<span class="hljs-keyword">for</span> x,y <span class="hljs-keyword">in</span> [(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>),(<span class="hljs-number">2</span>,<span class="hljs-number">4</span>)]:               获取列表的元素<br><span class="hljs-keyword">for</span> i ,v <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(L):               获取列表的元素和下标&lt;/span&gt;<br></code></pre></div></td></tr></table></figure>
+          </div>
+ <div class="note note-success">
+            <p> F. <strong>矩阵转置</strong></p><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">zip</span>(*matrix)                 矩阵转置<br></code></pre></div></td></tr></table></figure>
+          </div>
+
+<h2 id="3-高阶函数（map-reduce-filter-sorted-）"><a href="#3-高阶函数（map-reduce-filter-sorted-）" class="headerlink" title="3. 高阶函数（map(),reduce(),filter(),sorted()）"></a>3. 高阶函数（map(),reduce(),filter(),sorted()）</h2><p>A. <strong>map()</strong><br>接收一个函数和一个序列。map()把传入的函数依次作用于每个元素，然后在返回整个序列<br> <div class="note note-info">
+            <p>list(map(str, [1, 2, 3, 4, 5, 6, 7, 8, 9]))</p>
+          </div><br>B. <strong>reduce()</strong><br>接收一个函数和一个序列，reduce()把传入的函数依次作用于每2个元素，做累积，最后返回一个值<br> <div class="note note-success">
+            <p>reduce(x+y, [1, 3, 5, 7, 9])<br>reduce(lambda x, y: x * 10 + y, map(char2num, s)）</p>
+          </div><br>C. <strong>filter()</strong><br>接收一个函数和一个序列。filter()把传入的函数依次作用于每个元素，然后根据返回值是True还是False决定留还是丢弃该元素。返回的是一个迭代器<br> <div class="note note-info">
+            <p>list(filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15]))</p>
+          </div><br>D. <strong>Sorted()</strong><br>接收一个序列和一个key，将key作用于这个序列，然后对这个序列排序<br> <div class="note note-success">
+            <p>sorted([‘bob’, ‘about’, ‘Zoo’, ‘Credit’], key=str.lower,reverse=True)<br>print(sorted([(‘Bob’, 75),( ‘Adam’,92),( ‘Bart’,66),( ‘Lisa’,88)],key=lambda x:x[0]))</p>
+          </div></p>
+<h2 id="4-应用-队列-堆栈-链表"><a href="#4-应用-队列-堆栈-链表" class="headerlink" title="4. 应用(队列,堆栈,链表)"></a>4. 应用(队列,堆栈,链表)</h2><p>A. <strong>队列</strong><br>list用做队列 要用collections.deque—先进先出</p>
+<div class="note note-info">
+            <p>from collections import deque<br>queue=deque([“Eric”,”John”,”Michael”])<br>queue.append(“Terry”)            # Terry arrives<br>queue.append(“Graham”)           # Graham arrives<br>queue.popleft()                  # The first to arrive now leaves’Eric’<br>queue.popleft()                   # The second to arrive now leaves’John’<br>queue                           # Remaining queue in order of arrival<br>deque([‘Michael’, ‘Terry’, ‘Graham’])</p>
+          </div>
+<p>B. <strong>堆栈</strong><br>list用成栈—-先进后出</p>
+<div class="note note-success">
+            <p>L.append<br>L.pop</p>
+          </div>
+<p>C. <strong>链表</strong><br>List作为链表使用的代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-comment"># Definition for singly-linked list.</span><br><span class="hljs-comment"># class ListNode(object):</span><br><span class="hljs-comment">#     def __init__(self, x):</span><br><span class="hljs-comment">#         self.val = x</span><br><span class="hljs-comment">#         self.next = None</span><br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>(<span class="hljs-params"><span class="hljs-built_in">object</span></span>):</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">addTwoNumbers</span>(<span class="hljs-params">self, l1, l2</span>):</span><br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type l1: ListNode</span><br><span class="hljs-string">        :type l2: ListNode</span><br><span class="hljs-string">        :rtype: ListNode</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>		<span class="hljs-comment">#定义只有头节点的空链表，l3为头指针，p为遍历指针，carry为进值</span><br>        l3=p=ListNode(<span class="hljs-number">0</span>)        <br>        carry=<span class="hljs-number">0</span><br>        <span class="hljs-keyword">while</span> l1 <span class="hljs-keyword">or</span> l2 <span class="hljs-keyword">or</span> carry:<br>            <span class="hljs-keyword">if</span> l1:<br>                carry+=l1.val<br>                l1=l1.<span class="hljs-built_in">next</span><br>            <span class="hljs-keyword">if</span> l2:<br>                carry+=l2.val<br>                l2=l2.<span class="hljs-built_in">next</span><br>            p.<span class="hljs-built_in">next</span>=ListNode(carry%<span class="hljs-number">10</span>)<br>            p=p.<span class="hljs-built_in">next</span>;<br>            carry=carry//<span class="hljs-number">10</span><br>        <span class="hljs-keyword">return</span> l3.<span class="hljs-built_in">next</span><br></code></pre></div></td></tr></table></figure>
+
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/python/">python</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/python/">python</a>
+                    
+                      <a class="hover-with-bg" href="/tags/list/">list</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/12/23/%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97_4/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">科技论文写作之句子语法结构</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/12/21/Python%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89/">
+                        <span class="hidden-mobile">python基础入门之函数定义</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"FaDywmhlwL9g8YslF37OlNAz-MdYXbMMI","appKey":"NqWmTjkC1ip5N7yOrhvYkUbn","placeholder":"说点什么吧","path":"window.location.pathname","avatar":"mp","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[],"appid":"FaDywmhlwL9g8YslF37OlNAz-MdYXbMMI","appkey":"NqWmTjkC1ip5N7yOrhvYkUbn","notify":true,"verify":true},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-x-md">
+    <div class="container custom post-custom mx-auto">
+      <img src="https://octodex.github.com/images/jetpacktocat.png" srcset="/media/acatars/loading.gif" lazyload class="rounded mx-auto d-block mt-5" style="width:150px; height:150px;">
+    </div>
+  </div>
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://github.com/fengtt42/fengtt42.github.io/tree/master" target="_blank"><i class="iconfont icon-github-fill"></i></a>&nbsp <a href="https://blog.csdn.net/qq_31813549?spm=1011.2124.3001.5343" target="_blank"><i class="iconfont icon-brush"></i></a>&nbsp <a href="https://www.notion.so/fengtongtong/5b9cd758d3e644b2918c49a206559e1c?v=64f05a444b53459d9f86c2409535345b" target="_blank"><i class="iconfont icon-notebook"></i></a>&nbsp <a href="/media/reward/wechat.png" target="_blank"><i class="iconfont icon-wechat-fill"></i></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            The total number of hits is 
+            <span id="busuanzi_value_site_pv"></span>
+            ,
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            and the total number of visitors is 
+            <span id="busuanzi_value_site_uv"></span>
+            .
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
