@@ -1,0 +1,609 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/media/acatars/favicon.png">
+  <link rel="icon" href="/media/acatars/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="课题三--自适应的多媒体元素传输调度：1. 研究场景和研究动机；2. 研究内容；3.  创新点；4.系统方案和技术路线；5. 项目进度安排；6. 已有基础；7.预期成果形式，达到的技术指标；8.参考文献。">
+  <meta name="author" content="FTT">
+  <meta name="keywords" content="">
+  
+  <title>课题三--Adaptive Multi-element Scheduling for Latency-sensitive Real-time Video Streaming - Fengtt&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/media/acatars/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 50vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fengtt's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/statistics/">
+                <i class="iconfont icon-tags-fill"></i>
+                Statistics
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-friends"></i>
+                Friends
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/">
+                <i class="iconfont icon-comment"></i>
+                Contact
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/media/post_banner/paper/p-8.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.1)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="课题三--Adaptive Multi-element Scheduling for Latency-sensitive Real-time Video Streaming">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      FTT
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-09-04 10:59" pubdate>
+        September 4, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      39
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">课题三--Adaptive Multi-element Scheduling for Latency-sensitive Real-time Video Streaming</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：September 4, 2021 am
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="一-、研究场景和研究动机"><a href="#一-、研究场景和研究动机" class="headerlink" title="一 、研究场景和研究动机"></a>一 、研究场景和研究动机</h2><h3 id="A-研究场景"><a href="#A-研究场景" class="headerlink" title="A. 研究场景"></a>A. 研究场景</h3><p>实时对战游戏场景下，客户端与边缘服务器之间的多种媒体元素的传输调度(用户侧而非核心网侧)。算法部署于边缘结点。</p>
+<h3 id="B-研究动机"><a href="#B-研究动机" class="headerlink" title="B. 研究动机"></a>B. 研究动机</h3><p><strong>1. 时延敏感网络</strong><br>随着各种视频应用的兴起，网络传输对于时延的要求越来越高，学术界和工业界也高度重视，不断提出各种措施诸如QUIC协议，CMAF框架等通过增加网络资源开销或降低传输的可靠性来优化时延，然而随着5G的普及，很多应用的时延已经完全可以满足用户需求，例如：短视频和点播等，其不需要极致的时延追求，这样其就可以将资源分给对时延追求更高的应用，例如实时对战游戏，王者荣耀或者LOL等应用。<font color=red>所以对时延的追求并非越低越好，而是在满足确定性时延即可。</font> </p>
+<div class="note note-success">
+            <p>时延敏感网络指的是， 当前数据内容块需要在规定时间内传输， 并且只要满足规定时间， 就可以理论上满足用户的多媒体传输需求。 由于多媒体内容块是连续的数据， 当超出规定时间，将会影响后面的多媒体内容块传输甚至丢包。 所以只要多媒体内容块可以在规定时间内传输， 就没必要继续以增加网络开销为代价降低传输延迟。 并且可以可控的保证每一个流媒体内容块的视频质量。 所以针对不同的媒体元素构建一个在确定性时延基础上的流媒体调度策略， 可以在平衡超低时延、 资源开销和传输可靠性（丢包） 的基础上获取最优的用户体验。</p>
+          </div>
+
+<p><strong>2. 个性化时延敏感网络</strong></p>
+<ul>
+<li>在时延敏感网络中，例如：实时对战游戏场景下，<font color=red>针对同一视频的不同的媒体元素也会有不同的时延敏感度需求，并且有有明显的优先级特征(控制信令&gt;音频&gt;视频)。</font> 例如在上班途中打王者荣耀，由于基站的切换或者建筑物的遮挡将会导致网络状态极其不稳定，在网络较差的情况下，有2种方案，第一种方案，多种媒体元素按按照轮滑或者贪心算法的方式分发调度；第二种方案，按照优先级和时延需求，优先完整传输控制信令，然后在传输音频和视频画面。显然第二种用户体验会更好。不同的视频信令是按照chunk进行传输的，如果按照轮滑的方式，在网络差的情况下，极端情况下，可能导致全部信令的整个chunk不能完整的传输，进而导致客户端不能完整的解码，最终客户端的操作发生中断；如果按照第二种方式，即使视频画面掉帧或者音频信号中断，游戏操作也会稳定传输，可以极大的降低网络不稳定带来的用户体验急剧下降。</li>
+<li><font color=red>由于用户的个性化需求、地域性的网络状态和流媒体视频内容的差异，导致对于同一用户，不用的视频内容也会存在对不同的媒体元素有不同的时延敏感需求(<strong>可变敏感时延</strong>)。</font>所以如何针对不同的用户，视频内容，地域性的网络状态使得流媒体传输控制满足个性化的时延需求也是一个急需要解决的问题。</li>
+</ul>
+<p><strong>3. 流量调度算法</strong><br>构建一个实时对战视频流的多种媒体元素调度算法，可以极好的优化个性化时延敏感网络的2个需求并且增强用户体验和降低资源开销。</p>
+<ul>
+<li>传输的流量调度算法仅仅通过使用最优化理论的方法实现资源的最大化利用[1][2][3][4]，而其没有考虑视频场景下用户针对不同视频内容的不同媒体元素的特性（数据块大小，优先级，时延敏感度，时钟同步）。</li>
+<li>传统的流量调度算法更多的侧重于贪心算法，没有考虑确定性时延需求下的资源节省和最优化利用。不是资源全部利用就是最优的。</li>
+<li>传统的流量调度算法仅仅考虑了传输内容的大小，优先级和当前的网络情况，<font color=red>并没有考虑流量调度策略和发送速率决策之间的相互约束关系。</font>个性化时延敏感网络中，发送速率可以极大的影响传输时延，并且影响流量调度算法的决策。而流量调度策略也会影响发送速率的稳定性，减少多余的数据包传输，进而减少重传和丢包。如果可以很好的构建两者的约束关系，其可以最优流量调度的决策。</li>
+</ul>
+ <div class="note note-info">
+            <p>由于个性化延迟敏感网络下的视频流传输的特殊性，我们考虑的是同一视频流的多种媒体元素的传输控制，而非传统的muti-path or multi-chanel传输调度(一种媒体元素多条链路的传输控制)，<font color=green>相对于传统的方案，其更加关注多种媒体元素的不同时延需求，不同优先级，和多种媒体元素的同步。</font></p>
+          </div>
+
+<h2 id="二、研究内容"><a href="#二、研究内容" class="headerlink" title="二、研究内容"></a>二、研究内容</h2><p>构建一个实时对战视频流场景下的多种媒体元素调度算法， 其可以在满足不同用户针对不同视频内容不同媒体元素的时延需求的基础上，平衡系统的资源开销、传输可靠性和用户体验最优之间的关系，实现网络资源与个性化需求之间的感知、决策与实时适配。  </p>
+<ol>
+<li>基于流量调度策略和发送速率决策之间的相互约束关系，构建一个实时对战视频流场景下的多种媒体元素调度算法，其可以在满足同一用户针对同一视频内容不同媒体元素的时延需求的基础上，平衡系统的资源开销、传输可靠性和用户体验最优之间的关系。</li>
+<li>基于用户个性化的延迟敏感度(不同用户，不同视频内容，不同媒体元素)，通过元学习框架实现媒体元素调度算法的自适应调整。</li>
+</ol>
+<h2 id="三、创新点"><a href="#三、创新点" class="headerlink" title="三、创新点"></a>三、创新点</h2><ol>
+<li>本文构建了一个发送速率辅助的实时对战视频流场景下的多种媒体元素调度算法。针对于不同的媒体元素与复杂的网络情况构建定制化的深度强化学习模型，设立QoE指标奖励函数，学习在确定性时延基础上的流媒体内容块调度策略，可以在系统的资源开销、传输可靠性的基础上获取最优的用户体验。  </li>
+<li>流媒体传输时延的目标并非越低越好， 而是针对不同的媒体内容块满足确定性时延即可,并且不同的媒体元素对时延有明显的优先级特征（控制信令&gt;声音&gt;视频），不同的用户，不同的网络情况和不同的视频内容对于时延敏感度也存在不同程度的影响，因此针对于不同的延迟敏感度提出自适应的媒体元素调度算法。</li>
+</ol>
+<h2 id="四、系统方案和技术路线"><a href="#四、系统方案和技术路线" class="headerlink" title="四、系统方案和技术路线"></a>四、系统方案和技术路线</h2><h3 id="A-系统方案"><a href="#A-系统方案" class="headerlink" title="A. 系统方案"></a>A. 系统方案</h3><ol>
+<li>采用<font color=red>深度强化学习模型</font>，选择合理的状态与动作空间，将感知到的复杂网络状态，不同种媒体元素的优先级与确定性时延共同组成状态空间， 将多媒体内容块的发送顺序和当前节点的发送速率作为动作空间，以最终的用户QoE指标作为奖励信息，训练出合理的决策链供给策略， 实现对网络资源的最优利用和对网络多媒体内容块的最优引导， 提升用户的服务质量。 可以在系统的资源开销、传输可靠性的基础上获取最优的用户体验。  </li>
+<li>基于用户个性化的延迟敏感度(不同用户，不同视频内容，不同媒体元素)，通过<font color=red>元学习框架</font>实现媒体元素调度算法的自适应调整。</li>
+</ol>
+<h3 id="B-模型结构"><a href="#B-模型结构" class="headerlink" title="B. 模型结构"></a>B. 模型结构</h3><p>设计底层网络结构对状态空间进行特征提取，施加注意力机制后分为两个分支，即针对于调度决策与发送速率决策单分别进行学习。<br><img src="https://img-blog.csdnimg.cn/55c23a8747dd4f6bb72bbc23f6f12cec.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5LuK55Sf5ZSv5bCU,size_20,color_FFFFFF,t_70,g_se,x_16" srcset="/media/acatars/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h2 id="五、项目进度安排"><a href="#五、项目进度安排" class="headerlink" title="五、项目进度安排"></a>五、项目进度安排</h2><p>9.05～9.12：重新对比赛仿真器进行学习，修改原仿真器中关于QoE指标的计算<br>9.13～9.27：设计并完成base模型的搭建，包括模型的结构，输入，奖励函数的设置<br>9.28～10.12：与环境进行交互训练，对模型进行优化调整</p>
+<h2 id="六、已有基础"><a href="#六、已有基础" class="headerlink" title="六、已有基础"></a>六、已有基础</h2><ol>
+<li>环境部分可使用aitrans比赛的仿真器</li>
+<li>网络轨迹数据集可以使用比赛数据集，并且数据集已经完成确定性时延的设定</li>
+</ol>
+<h2 id="七、预期成果形式，达到的技术指标"><a href="#七、预期成果形式，达到的技术指标" class="headerlink" title="七、预期成果形式，达到的技术指标"></a>七、预期成果形式，达到的技术指标</h2><ol>
+<li>预期成果：论文一篇（12月底的ICME）</li>
+<li>技术指标：实现整体性能优于之前比赛的性能。</li>
+</ol>
+<h2 id="八、参考文献"><a href="#八、参考文献" class="headerlink" title="八、参考文献"></a>八、参考文献</h2><p>[1]Andrews, M.. “Joint Optimization of Scheduling and Congestion Control in Communication Networks.” <em>2006 40th Annual Conference on Information Sciences and Systems</em> (2006): 1572-1577.</p>
+<p>[2]Zhao, Shizhen and Xiaojun Lin. “Rate-control and multi-channel scheduling for wireless live streaming with stringent deadlines.” <em>IEEE INFOCOM 2014 - IEEE Conference on Computer Communications</em> (2014): 1923-1931.</p>
+<p>[3]Wang, Xin, Zhaoquan Li and Jie Wu. “Joint TCP Congestion Control and CSMA Scheduling without Message Passing.” <em>IEEE Transactions on Wireless Communications</em> 12 (2013): 6194-6204.</p>
+<p>[4]Zuo, Shuai, I.-Hong Hou, Tie Liu, A. Swami and P. Basu. “Joint Rate Control and Scheduling for Real-Time Wireless Networks.” <em>IEEE Transactions on Wireless Communications</em> 16 (2017): 4562-4570.<br>ireless Networks.” <em>IEEE Transactions on Wireless Communications</em> 16 (2017): 4562-4570.</p>
+<blockquote>
+<p>注：如有任何问题，欢迎留言。</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/project/">project</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/project/">project</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/06/01/DQN(Deep%20Q-Learning)/">
+                        <span class="hidden-mobile">深度强化学习DQN(Deep Q-Learning)</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"FaDywmhlwL9g8YslF37OlNAz-MdYXbMMI","appKey":"NqWmTjkC1ip5N7yOrhvYkUbn","placeholder":"说点什么吧","path":"window.location.pathname","avatar":"mp","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[],"appid":"FaDywmhlwL9g8YslF37OlNAz-MdYXbMMI","appkey":"NqWmTjkC1ip5N7yOrhvYkUbn","notify":true,"verify":true},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-x-md">
+    <div class="container custom post-custom mx-auto">
+      <img src="https://octodex.github.com/images/jetpacktocat.png" srcset="/media/acatars/loading.gif" lazyload class="rounded mx-auto d-block mt-5" style="width:150px; height:150px;">
+    </div>
+  </div>
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://github.com/fengtt42/fengtt42.github.io/tree/master" target="_blank"><i class="iconfont icon-github-fill"></i></a>&nbsp <a href="https://blog.csdn.net/qq_31813549?spm=1011.2124.3001.5343" target="_blank"><i class="iconfont icon-brush"></i></a>&nbsp <a href="https://www.notion.so/fengtongtong/5b9cd758d3e644b2918c49a206559e1c?v=64f05a444b53459d9f86c2409535345b" target="_blank"><i class="iconfont icon-notebook"></i></a>&nbsp <a href="/media/reward/wechat.png" target="_blank"><i class="iconfont icon-wechat-fill"></i></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            The total number of hits is 
+            <span id="busuanzi_value_site_pv"></span>
+            ,
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            and the total number of visitors is 
+            <span id="busuanzi_value_site_uv"></span>
+            .
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
