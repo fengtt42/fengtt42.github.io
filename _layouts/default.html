@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{ page.title }}</title>
+
+    <link href="{{site.baseurl}}/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Kaushan+Script|Droid+Serif:400,700,400italic,700italic|Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="{{site.baseurl}}/static/css/agency.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41410283-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41410283-2');
+    </script>
+  </head>
+
+
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav" style="background-color: #fff">
+      <div class="container">
+
+        <div class="naver-header">
+          <a class="navbar-brand" href="https://github.com/fengtt42"><b>Tongtong Feng</b></a>
+          <button type="button" class="navbar-toggler collapsed"
+                  data-toggle="collapse"
+                  data-target=".navbar-collapse"
+                  aria-expanded="false">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- <div class="collapse navbar-collapse" id="navbarResponsive"> -->
+        <div class="collapse navbar-collapse" aria-expanded="false" style="height: 0px;">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item active">
+              <a href="#about" data-target="#about" style="color:#34495e"><span><b>Home&nbsp;&nbsp;&nbsp;</b></span></a>
+            </li>
+            <li class="nav-item active">
+              <a href="#publications" data-target="#publications" style="color:#34495e"><span><b>Publications&nbsp;&nbsp;&nbsp;</b></span></a>
+            </li>
+            <li class="nav-item active">
+              <a href="#project" data-target="#project" style="color:#34495e"><span><b>Project&nbsp;&nbsp;&nbsp;</b></span></a>
+            </li>
+            <li class="nav-item active">
+              <a href="#service" data-target="#service" style="color:#34495e"><span><b>Service&nbsp;&nbsp;&nbsp;</b></span></a>
+            </li>
+            <li class="nav-item active">
+              <a href="#contact" data-target="#contact" style="color:#34495e"><span><b>Contact</b></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <br>
+    <br>
+    {{content}}
+
+    <div style="position: fixed; bottom: 30px; right:10px;">
+    <a href=""> <img src="{{ site.baseurl }}/static/img/logo/cn.png" /> </a>
+    </div>
+
+    
+    <!-- Footer -->
+    <footer style="background-color:#373435ff;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img alt="Creative Commons License" style="border-width:1px;float:left;margin-right:15px;margin-bottom:0px;" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png"/>
+            <span class="copyright" style="color:#eee;">Copyright &copy; Tongtong Feng</span>
+          </div>
+          <div class="col-md-8">
+            <p style="color:#eee;">For any questions, email us at
+              <a href="mailto:fengtongtong@tsinghua.edu.cn"> fengtongtong@tsinghua.edu.cn</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{site.baseurl}}/static/vendor/jquery/jquery.min.js"></script>
+    <script src="{{site.baseurl}}/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{site.baseurl}}/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="{{site.baseurl}}/static/js/agency.min.js"></script>
+
+  </body>
+</html>
