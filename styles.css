@@ -970,6 +970,33 @@ article .article-metadata {
   margin-bottom: 0;
 }
 
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contact-info {
+  flex: 1 1 40%;
+  min-width: 300px;
+}
+
+.contact-map {
+  flex: 1 1 40%;
+  min-width: 300px;
+  text-align: right;
+}
+
+.contact-map img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 #map {
   height: 350px;
   width: 100%;
