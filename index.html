@@ -389,6 +389,246 @@ layout: default
 </section>
 
 
+<!-- Projects -->
+<section id="project" class="projects-showcase">
+  <style>
+    #project.projects-showcase {
+      position: relative;
+      clear: both;
+      overflow: hidden;
+      padding: 88px 0 96px;
+      background:
+        radial-gradient(circle at 8% 8%, rgba(47, 151, 232, 0.10), transparent 28%),
+        radial-gradient(circle at 92% 22%, rgba(126, 83, 244, 0.10), transparent 30%),
+        linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+    }
+
+    #project .projects-shell {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    #project .projects-heading {
+      max-width: 780px;
+      margin-bottom: 34px;
+    }
+
+    #project .projects-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      color: #5653d8;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    #project .projects-kicker::before {
+      width: 28px;
+      height: 2px;
+      content: "";
+      border-radius: 999px;
+      background: linear-gradient(90deg, #279ce8, #8855ef);
+    }
+
+    #project .projects-title {
+      margin: 0 0 13px;
+      color: #172033;
+      font-size: clamp(2.25rem, 5vw, 3.4rem);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+    }
+
+    #project .projects-intro {
+      margin: 0;
+      color: #667085;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    #project .project-frame {
+      margin-top: 30px;
+      padding: 13px;
+      border: 1px solid rgba(90, 105, 145, 0.18);
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 24px 70px rgba(32, 48, 87, 0.10);
+    }
+
+    #project .project-frame-primary {
+      border-color: rgba(92, 91, 225, 0.25);
+      box-shadow: 0 25px 75px rgba(79, 88, 214, 0.15);
+    }
+
+    #project .project-visual {
+      overflow: hidden;
+      border-radius: 17px;
+      background: #edf1fa;
+    }
+
+    #project .project-visual a {
+      display: block;
+    }
+
+    #project .project-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.35s ease;
+    }
+
+    #project .project-visual a:hover img {
+      transform: scale(1.008);
+    }
+
+    #project .project-meta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: end;
+      padding: 26px 15px 13px;
+    }
+
+    #project .project-number {
+      margin-bottom: 7px;
+      color: #6764dc;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    #project .project-name {
+      margin: 0 0 8px;
+      color: #172033;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 780;
+      letter-spacing: -0.025em;
+    }
+
+    #project .project-description {
+      max-width: 820px;
+      margin: 0;
+      color: #667085;
+      line-height: 1.72;
+    }
+
+    #project .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    #project .project-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 11px;
+      border: 1px solid #dfe4f2;
+      border-radius: 999px;
+      color: #515c72;
+      background: #f8f9fd;
+      font-size: 0.78rem;
+      font-weight: 650;
+    }
+
+    #project .project-action {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 18px;
+      border-radius: 11px;
+      color: #ffffff;
+      background: linear-gradient(115deg, #2b95e6, #7958ed);
+      font-size: 0.9rem;
+      font-weight: 750;
+      white-space: nowrap;
+      box-shadow: 0 12px 28px rgba(89, 84, 222, 0.24);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    #project .project-action:hover {
+      color: #ffffff;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 15px 32px rgba(89, 84, 222, 0.32);
+    }
+
+    @media (max-width: 760px) {
+      #project.projects-showcase { padding: 64px 0 70px; }
+      #project .projects-shell { width: min(100% - 24px, 1180px); }
+      #project .project-frame { padding: 8px; border-radius: 19px; }
+      #project .project-visual { border-radius: 13px; }
+      #project .project-meta { grid-template-columns: 1fr; gap: 18px; padding: 21px 10px 11px; }
+      #project .project-action { width: 100%; }
+    }
+  </style>
+
+  <div class="projects-shell">
+    <header class="projects-heading">
+      <div class="projects-kicker">Featured Research</div>
+      <h1 class="projects-title">Projects</h1>
+      <p class="projects-intro">
+        Research platforms, datasets, and benchmarks for scalable swarm-UAV autonomous flight and embodied long-horizon tasks.
+      </p>
+    </header>
+
+    <article class="project-frame project-frame-primary">
+      <div class="project-visual">
+        <a href="https://fengtt42.github.io/U2UData-2/" target="_blank" rel="noopener noreferrer" aria-label="Visit the U2UData+ project website">
+          <img src="{{ site.baseurl }}/static/files/publications/project_1_1.png" alt="U2UData+ project overview with a blue and purple background">
+        </a>
+      </div>
+      <div class="project-meta">
+        <div>
+          <div class="project-number">01 · Project Overview</div>
+          <h2 class="project-name">U2UData+: Scalable Swarm-UAV Autonomous Flight</h2>
+          <p class="project-description">
+            An integrated simulator, dataset, benchmark, and task suite designed for embodied long-horizon research in large-scale collaborative UAV environments.
+          </p>
+          <div class="project-tags" aria-label="Project features">
+            <span class="project-tag">U2USim+</span>
+            <span class="project-tag">U2UData+</span>
+            <span class="project-tag">Benchmark</span>
+            <span class="project-tag">Long-Horizon Tasks</span>
+          </div>
+        </div>
+        <a class="project-action" href="https://fengtt42.github.io/U2UData-2/" target="_blank" rel="noopener noreferrer">
+          Explore U2UData+ ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="project-frame">
+      <div class="project-visual">
+        <a href="https://fengtt42.github.io/U2UData-2/" target="_blank" rel="noopener noreferrer" aria-label="Explore the U2UData+ dataset and simulator">
+          <img src="{{ site.baseurl }}/static/files/publications/project_1_2.png" alt="Multi-modal UAV simulation scenes and environmental attributes">
+        </a>
+      </div>
+      <div class="project-meta">
+        <div>
+          <div class="project-number">02 · Dataset &amp; Simulation</div>
+          <h2 class="project-name">Multi-modal Environments at Scale</h2>
+          <p class="project-description">
+            Photorealistic multi-UAV scenarios combine RGB scenes with depth, semantic segmentation, infrared sensing, weather, time, altitude, and motion attributes for perception, planning, and long-horizon evaluation.
+          </p>
+          <div class="project-tags" aria-label="Dataset modalities">
+            <span class="project-tag">Depth</span>
+            <span class="project-tag">Segmentation</span>
+            <span class="project-tag">Infrared</span>
+            <span class="project-tag">Environment Metadata</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+
 <!-- Service -->
 <section id="service" style="clear:both;">
   <div class="container">
