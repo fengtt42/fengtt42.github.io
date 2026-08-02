@@ -133,43 +133,18 @@ layout: default
     background: linear-gradient(90deg, var(--theme-blue), var(--theme-teal), var(--theme-gold));
   }
 
-  #publications > .container > .row > p.text-muted {
-    width: 100%;
-    margin: 4px 0 22px;
-    padding: 15px 18px;
-    color: #52627a !important;
-    border: 1px solid rgba(47, 111, 235, 0.15);
-    border-left: 4px solid var(--theme-blue);
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.66);
-  }
-
   #publications .publication {
     position: relative;
     overflow: hidden;
     border: 1px solid var(--theme-line);
-    border-left: 5px solid var(--theme-blue);
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.96);
     box-shadow: 0 12px 34px rgba(32, 56, 98, 0.08);
-    transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
-  }
-
-  #publications .publication:nth-of-type(3n + 1) {
-    border-left-color: var(--theme-blue);
-  }
-
-  #publications .publication:nth-of-type(3n + 2) {
-    border-left-color: var(--theme-teal);
-  }
-
-  #publications .publication:nth-of-type(3n) {
-    border-left-color: var(--theme-gold);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
   }
 
   #publications .publication:hover {
     transform: translateY(-3px);
-    border-color: rgba(47, 111, 235, 0.34);
     box-shadow: 0 17px 42px rgba(32, 56, 98, 0.13);
   }
 
@@ -182,7 +157,7 @@ layout: default
   #publications .pub-title,
   #publications .pub-title a,
   #publications .pub-title a:visited {
-    color: var(--theme-ink);
+    color: #173a63;
     font-weight: 760;
   }
 
@@ -193,17 +168,17 @@ layout: default
   }
 
   #publications .pub-authors {
-    color: #68778e;
+    color: #66758a;
   }
 
   #publications .pub-authors b,
   #publications .pub-authors strong {
-    color: #3d526f;
+    color: #415674;
   }
 
   #publications .pub-authors + .pub-authors {
     margin-top: 4px;
-    color: #74839a;
+    color: #2f7f7a;
   }
 
   /* Service: fresh teal tint separates it from Projects without becoming playful. */
@@ -220,11 +195,15 @@ layout: default
     color: var(--theme-ink);
   }
 
-  #service hr {
-    border-color: #dce7e7;
+  #service > .container > .row {
+    align-items: stretch;
   }
 
   #service > .container > .row > ul {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    box-sizing: border-box;
     margin: 12px 0;
     padding: 20px 24px 20px 28px;
     border: 1px solid #dcebe9;
@@ -232,14 +211,6 @@ layout: default
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.82);
     box-shadow: 0 9px 25px rgba(29, 83, 79, 0.06);
-  }
-
-  #service > .container > .row > ul:nth-of-type(2) {
-    border-left-color: var(--theme-blue);
-  }
-
-  #service > .container > .row > ul:nth-of-type(3) {
-    border-left-color: var(--theme-gold);
   }
 
   #service li {
@@ -392,7 +363,7 @@ layout: default
   /* Publication titles: black by default, blue when interacting. */
   #publications .pub-title a,
   #publications .pub-title a:visited {
-    color: var(--theme-ink);
+    color: #173a63;
     text-decoration: none;
     transition: color 0.2s ease;
   }
@@ -412,12 +383,16 @@ layout: default
 
   /* Keep author names readable but visually secondary to the title. */
   #publications .pub-authors {
-    color: #68778e;
+    color: #66758a;
   }
 
   #publications .pub-authors b,
   #publications .pub-authors strong {
-    color: #3d526f;
+    color: #415674;
+  }
+
+  #publications .pub-authors + .pub-authors {
+    color: #2f7f7a;
   }
 </style>
 <section class="bg-light" id="publications" style="clear:both;">
@@ -428,15 +403,6 @@ layout: default
         <h1 class="section-subheading" style="text-align:left; margin-left:-14px">Selected Publications</h1>
       </div>
 
-      <br>
-
-      <p class="text-muted" style="text-align:left">
-        <br>
-        <b> Research -- Self-evolving Embodied AI for Long-horizon Tasks.</b>
-        Most recent publications on
-        <a href="https://scholar.google.com/citations?hl=en&user=_Xb7CIUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>.
-      </p
-        
       <br>
 
       <div class="publication">
@@ -758,11 +724,25 @@ layout: default
     }
 
     #project .projects-title {
+      position: relative;
+      display: inline-block;
       margin: 0 0 13px;
+      padding-bottom: 13px;
       color: #172033;
       font-size: clamp(2.25rem, 5vw, 3.4rem);
       font-weight: 800;
       letter-spacing: -0.045em;
+    }
+
+    #project .projects-title::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 72px;
+      height: 5px;
+      content: "";
+      border-radius: 999px;
+      background: linear-gradient(90deg, #2f6feb, #149b96, #d99a21);
     }
 
     #project .projects-intro {
@@ -962,10 +942,7 @@ layout: default
     <div class="row">
       <div class="col-md-12" style="text-align:left">
         <h1 class="section-subheading" style="text-align:left; margin-left:-14px">Service</h1>
-        <h1 class="section-subheading" style="text-align:left; margin-left:-14px"><hr/></h1>
       </div>
-      <br>
-      <br>
 
       <ul>
         <b>Area Chair:</b>
