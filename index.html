@@ -428,7 +428,7 @@ layout: default
       position: relative;
       clear: both;
       overflow: hidden;
-      padding: 88px 0 96px;
+      padding: 24px 0 72px;
       border-top: 1px solid rgba(78, 111, 190, 0.12);
       border-bottom: 1px solid rgba(78, 111, 190, 0.14);
       background:
@@ -598,7 +598,7 @@ layout: default
     }
 
     @media (max-width: 760px) {
-      #project.projects-showcase { padding: 64px 0 70px; }
+      #project.projects-showcase { padding: 20px 0 56px; }
       #project .projects-shell { width: min(100% - 24px, 1180px); }
       #project .project-frame { padding: 8px; border-radius: 19px; }
       #project .project-visual { border-radius: 13px; }
@@ -714,100 +714,15 @@ layout: default
 
 <!-- Contact -->
 <section id="contact">
-  <style>
-    #contact {
-      clear: both;
-      padding: 64px 0;
-      background: #f8fafc;
-      border-top: 1px solid #e7ebf2;
-    }
-
-    #contact .contact-container {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
-      gap: 56px;
-      align-items: center;
-    }
-
-    #contact .contact-info {
-      min-width: 0;
-    }
-
-    #contact .contact-details {
-      color: #667085;
-      line-height: 1.9;
-    }
-
-    #contact .contact-globe-card {
-      min-height: 300px;
-      padding: 20px;
-      border: 1px solid #e1e7f0;
-      border-radius: 22px;
-      background: #ffffff;
-      text-align: center;
-      box-shadow: 0 18px 46px rgba(40, 55, 90, 0.10);
-    }
-
-    #contact .contact-globe {
-      min-height: 245px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-radius: 16px;
-      background: radial-gradient(circle, #edf4ff 0%, #f8faff 68%, #ffffff 100%);
-    }
-
-    #contact .contact-globe canvas,
-    #contact .contact-globe iframe,
-    #contact .contact-globe img {
-      max-width: 100% !important;
-    }
-
-    #contact .contact-globe-caption {
-      margin: 13px 0 0;
-      color: #697386;
-      font-size: 0.82rem;
-      letter-spacing: 0.04em;
-    }
-
-    @media (max-width: 760px) {
-      #contact .contact-container {
-        grid-template-columns: 1fr;
-        gap: 34px;
-      }
-
-      #contact .contact-globe-card {
-        width: min(100%, 380px);
-        margin: 0 auto;
-      }
-    }
-  </style>
-
   <div class="container">
-    <div class="contact-container">
-      <div class="contact-info">
-        <h2 class="section-heading text-uppercase">Contact</h2>
-        <div class="contact-details">
-          Email: <a href="mailto:fengtongtong@tsinghua.edu.cn">fengtongtong@tsinghua.edu.cn</a>
-          <br>
-          Address: FiT Building 4-305, Tsinghua University, Beijing, China
-          <br>
-          Post Code: 100084
-        </div>
-      </div>
-
-      <div class="contact-globe-card">
-        <div class="contact-globe" aria-label="Global visitor locations and visit activity">
-          <script type="text/javascript" id="clstr_globe" src="https://cdn.clustrmaps.com/globe.js?d=3j5jiE33xchOAiHYApgz3OGyMQ86FHBy76ifzZF4peI"></script>
-          <noscript>
-            <a href="https://clustrmaps.com/site/1c50p" title="View visitor locations">
-              <img src="https://www.clustrmaps.com/map_v2.png?d=3j5jiE33xchOAiHYApgz3OGyMQ86FHBy76ifzZF4peI&amp;cl=ffffff" alt="Visitor location map">
-            </a>
-          </noscript>
-        </div>
-        <p class="contact-globe-caption">Global visitor locations and activity</p>
-      </div>
+    <br>
+    <h2 class="section-heading text-uppercase">Contact</h2>
+    <div class="text-muted">
+      Email: fengtongtong@tsinghua.edu.cn
+      <br>
+      Address: FiT Building 4-305, Tsinghua University, Beijing, China
+      <br>
+      Post Code: 100084
     </div>
   </div>
 </section>
