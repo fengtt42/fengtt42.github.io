@@ -106,7 +106,7 @@ layout: default
 
   /* Publications: lively academic cards with clear information hierarchy. */
   #publications.bg-light {
-    padding-top: 72px;
+    padding-top: 68px;
     padding-bottom: 78px;
     background:
       radial-gradient(circle at 94% 8%, rgba(116, 87, 232, 0.09), transparent 25%),
@@ -116,7 +116,7 @@ layout: default
 
   #publications h1.section-subheading {
     display: inline-block;
-    margin-left: 0 !important;
+    margin: 0 !important;
     padding-bottom: 13px;
     color: var(--theme-ink);
     position: relative;
@@ -131,6 +131,19 @@ layout: default
     content: "";
     border-radius: 999px;
     background: linear-gradient(90deg, var(--theme-blue), var(--theme-teal), var(--theme-gold));
+  }
+
+  #publications > .container > .row > .col-md-12,
+  #service > .container > .row > .col-md-12 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 36px;
+  }
+
+  #publications > .container > .row > .col-md-12 + .publication,
+  #service > .container > .row > .col-md-12 + ul {
+    margin-top: 0;
   }
 
   #publications .publication {
@@ -190,7 +203,11 @@ layout: default
       linear-gradient(180deg, #ffffff 0%, #f3faf9 100%);
   }
 
-  #service h1,
+  #service h1 {
+    margin: 0;
+    color: var(--theme-ink);
+  }
+
   #service b {
     color: var(--theme-ink);
   }
@@ -402,8 +419,6 @@ layout: default
       <div class="col-md-12" style="text-align:left">
         <h1 class="section-subheading" style="text-align:left; margin-left:-14px">Selected Publications</h1>
       </div>
-
-      <br>
 
       <div class="publication">
         <div class="publication-left">
@@ -684,7 +699,7 @@ layout: default
       position: relative;
       clear: both;
       overflow: hidden;
-      padding: 24px 0 72px;
+      padding: 68px 0 72px;
       border-top: 1px solid rgba(78, 111, 190, 0.12);
       border-bottom: 1px solid rgba(78, 111, 190, 0.14);
       background:
@@ -700,7 +715,7 @@ layout: default
 
     #project .projects-heading {
       max-width: 780px;
-      margin-bottom: 34px;
+      margin-bottom: 36px;
     }
 
     #project .projects-kicker {
@@ -726,7 +741,7 @@ layout: default
     #project .projects-title {
       position: relative;
       display: inline-block;
-      margin: 0 0 13px;
+      margin: 0;
       padding-bottom: 13px;
       color: #172033;
       font-size: clamp(2.25rem, 5vw, 3.4rem);
@@ -759,6 +774,10 @@ layout: default
       border-radius: 25px;
       background: rgba(255, 255, 255, 0.94);
       box-shadow: 0 24px 70px rgba(32, 48, 87, 0.10);
+    }
+
+    #project .projects-heading + .project-frame {
+      margin-top: 0;
     }
 
     #project .project-frame-primary {
@@ -868,7 +887,7 @@ layout: default
     }
 
     @media (max-width: 760px) {
-      #project.projects-showcase { padding: 20px 0 56px; }
+      #project.projects-showcase { padding: 52px 0 56px; }
       #project .projects-shell { width: min(100% - 24px, 1180px); }
       #project .project-frame { padding: 8px; border-radius: 19px; }
       #project .project-visual { border-radius: 13px; }
