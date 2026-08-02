@@ -98,6 +98,28 @@ layout: default
 </section>
 
 <!-- Publications -->
+<style>
+  /* Publication titles: black by default, blue when interacting. */
+  #publications .pub-title a,
+  #publications .pub-title a:visited {
+    color: #172033;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  #publications .pub-title a:hover,
+  #publications .pub-title a:focus-visible,
+  #publications .pub-title a:active {
+    color: #2557d6;
+    text-decoration: none;
+  }
+
+  #publications .pub-title a:focus-visible {
+    outline: 2px solid rgba(37, 87, 214, 0.3);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+</style>
 <section class="bg-light" id="publications" style="clear:both;">
   <div class="container">
     <!-- <div class="row justify-content-md-center text-center"> -->
