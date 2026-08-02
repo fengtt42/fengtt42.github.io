@@ -3,6 +3,296 @@ title: "Tongtong Feng"
 layout: default
 ---
 
+<style id="academic-vibrant-theme">
+  :root {
+    --theme-ink: #16243d;
+    --theme-muted: #64748b;
+    --theme-blue: #2f6feb;
+    --theme-blue-dark: #1e4fb8;
+    --theme-teal: #149b96;
+    --theme-gold: #d99a21;
+    --theme-purple: #7457e8;
+    --theme-line: #dce5f3;
+    --theme-blue-soft: #eef5ff;
+    --theme-teal-soft: #eefaf8;
+  }
+
+  body {
+    color: var(--theme-ink);
+    background: #ffffff;
+  }
+
+  #about a,
+  #publications a,
+  #service a,
+  #contact a {
+    color: var(--theme-blue);
+    transition: color 0.2s ease;
+  }
+
+  #about a:hover,
+  #publications a:hover,
+  #service a:hover,
+  #contact a:hover {
+    color: var(--theme-teal);
+  }
+
+  /* About: warm, approachable introduction with restrained accents. */
+  #about {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 8% 18%, rgba(47, 111, 235, 0.09), transparent 25%),
+      radial-gradient(circle at 92% 82%, rgba(20, 155, 150, 0.08), transparent 28%),
+      #ffffff;
+  }
+
+  #about .team-member {
+    padding: 28px 22px 24px;
+    border: 1px solid rgba(47, 111, 235, 0.14);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0 18px 46px rgba(29, 55, 99, 0.10);
+  }
+
+  #about .rounded-circle {
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 0 3px rgba(47, 111, 235, 0.22), 0 14px 34px rgba(38, 58, 96, 0.16);
+  }
+
+  #about h1,
+  #about h3,
+  #about h4,
+  #about h5,
+  #about h6 {
+    color: var(--theme-ink);
+  }
+
+  #about h1::after,
+  #service .section-subheading:first-child::after {
+    display: block;
+    width: 56px;
+    height: 4px;
+    margin-top: 12px;
+    content: "";
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--theme-blue), var(--theme-teal));
+  }
+
+  #about .text-muted {
+    color: var(--theme-muted) !important;
+  }
+
+  #about .network-icon a {
+    color: var(--theme-blue);
+    border: 1px solid #d8e3f5;
+    background: #f6f9ff;
+  }
+
+  #about .network-icon a:hover {
+    color: #ffffff;
+    border-color: var(--theme-blue);
+    background: linear-gradient(135deg, var(--theme-blue), var(--theme-purple));
+  }
+
+  #about li::marker {
+    color: var(--theme-teal);
+  }
+
+  #about font {
+    color: #c97913 !important;
+    font-weight: 700;
+  }
+
+  /* Publications: lively academic cards with clear information hierarchy. */
+  #publications.bg-light {
+    padding-top: 72px;
+    padding-bottom: 78px;
+    background:
+      radial-gradient(circle at 94% 8%, rgba(116, 87, 232, 0.09), transparent 25%),
+      radial-gradient(circle at 5% 62%, rgba(20, 155, 150, 0.08), transparent 27%),
+      linear-gradient(180deg, #edf4ff 0%, #f6f9ff 50%, #eff9f7 100%) !important;
+  }
+
+  #publications h1.section-subheading {
+    display: inline-block;
+    margin-left: 0 !important;
+    padding-bottom: 13px;
+    color: var(--theme-ink);
+    position: relative;
+  }
+
+  #publications h1.section-subheading::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 92px;
+    height: 5px;
+    content: "";
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--theme-blue), var(--theme-teal), var(--theme-gold));
+  }
+
+  #publications > .container > .row > p.text-muted {
+    width: 100%;
+    margin: 4px 0 22px;
+    padding: 15px 18px;
+    color: #52627a !important;
+    border: 1px solid rgba(47, 111, 235, 0.15);
+    border-left: 4px solid var(--theme-blue);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.66);
+  }
+
+  #publications .publication {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--theme-line);
+    border-left: 5px solid var(--theme-blue);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 12px 34px rgba(32, 56, 98, 0.08);
+    transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+  }
+
+  #publications .publication:nth-of-type(3n + 1) {
+    border-left-color: var(--theme-blue);
+  }
+
+  #publications .publication:nth-of-type(3n + 2) {
+    border-left-color: var(--theme-teal);
+  }
+
+  #publications .publication:nth-of-type(3n) {
+    border-left-color: var(--theme-gold);
+  }
+
+  #publications .publication:hover {
+    transform: translateY(-3px);
+    border-color: rgba(47, 111, 235, 0.34);
+    box-shadow: 0 17px 42px rgba(32, 56, 98, 0.13);
+  }
+
+  #publications .publication-left img {
+    border: 1px solid #e0e7f2;
+    border-radius: 11px;
+    background: #f8faff;
+  }
+
+  #publications .pub-title,
+  #publications .pub-title a,
+  #publications .pub-title a:visited {
+    color: var(--theme-ink);
+    font-weight: 760;
+  }
+
+  #publications .pub-title a:hover,
+  #publications .pub-title a:focus-visible,
+  #publications .pub-title a:active {
+    color: var(--theme-blue);
+  }
+
+  #publications .pub-authors {
+    color: #68778e;
+  }
+
+  #publications .pub-authors b,
+  #publications .pub-authors strong {
+    color: #3d526f;
+  }
+
+  #publications .pub-authors + .pub-authors {
+    margin-top: 4px;
+    color: #74839a;
+  }
+
+  /* Service: fresh teal tint separates it from Projects without becoming playful. */
+  #service {
+    padding-top: 68px;
+    padding-bottom: 70px;
+    background:
+      radial-gradient(circle at 90% 22%, rgba(20, 155, 150, 0.08), transparent 28%),
+      linear-gradient(180deg, #ffffff 0%, #f3faf9 100%);
+  }
+
+  #service h1,
+  #service b {
+    color: var(--theme-ink);
+  }
+
+  #service hr {
+    border-color: #dce7e7;
+  }
+
+  #service > .container > .row > ul {
+    margin: 12px 0;
+    padding: 20px 24px 20px 28px;
+    border: 1px solid #dcebe9;
+    border-left: 4px solid var(--theme-teal);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 9px 25px rgba(29, 83, 79, 0.06);
+  }
+
+  #service > .container > .row > ul:nth-of-type(2) {
+    border-left-color: var(--theme-blue);
+  }
+
+  #service > .container > .row > ul:nth-of-type(3) {
+    border-left-color: var(--theme-gold);
+  }
+
+  #service li {
+    color: #617086;
+  }
+
+  #service li::marker {
+    color: var(--theme-teal);
+  }
+
+  /* Contact: a confident dark finish with blue and teal depth. */
+  #contact {
+    padding: 58px 0 64px;
+    color: #dbe6f7;
+    background:
+      radial-gradient(circle at 85% 20%, rgba(47, 111, 235, 0.28), transparent 28%),
+      radial-gradient(circle at 8% 100%, rgba(20, 155, 150, 0.22), transparent 30%),
+      linear-gradient(135deg, #14223b 0%, #192d4d 58%, #173c49 100%);
+  }
+
+  #contact h2 {
+    color: #ffffff;
+  }
+
+  #contact h2::after {
+    display: block;
+    width: 52px;
+    height: 4px;
+    margin-top: 11px;
+    content: "";
+    border-radius: 999px;
+    background: linear-gradient(90deg, #6da4ff, #55d0c7, #f0bd59);
+  }
+
+  #contact .text-muted {
+    color: #c7d4e7 !important;
+  }
+
+  #contact a,
+  #contact a:hover {
+    color: #86b6ff;
+  }
+
+  @media (max-width: 760px) {
+    #about .team-member { padding: 22px 16px; }
+    #publications.bg-light { padding-top: 52px; padding-bottom: 58px; }
+    #publications .publication { border-radius: 14px; }
+    #service { padding-top: 52px; padding-bottom: 54px; }
+    #service > .container > .row > ul { padding: 17px 18px 17px 22px; }
+    #contact { padding: 44px 0 48px; }
+  }
+</style>
+
 <!-- About -->
 <section id="about">
   <div class="container">
@@ -102,7 +392,7 @@ layout: default
   /* Publication titles: black by default, blue when interacting. */
   #publications .pub-title a,
   #publications .pub-title a:visited {
-    color: #172033;
+    color: var(--theme-ink);
     text-decoration: none;
     transition: color 0.2s ease;
   }
@@ -110,24 +400,24 @@ layout: default
   #publications .pub-title a:hover,
   #publications .pub-title a:focus-visible,
   #publications .pub-title a:active {
-    color: #2557d6;
+    color: var(--theme-blue);
     text-decoration: none;
   }
 
   #publications .pub-title a:focus-visible {
-    outline: 2px solid rgba(37, 87, 214, 0.3);
+    outline: 2px solid rgba(47, 111, 235, 0.3);
     outline-offset: 3px;
     border-radius: 3px;
   }
 
   /* Keep author names readable but visually secondary to the title. */
   #publications .pub-authors {
-    color: #667085;
+    color: #68778e;
   }
 
   #publications .pub-authors b,
   #publications .pub-authors strong {
-    color: inherit;
+    color: #3d526f;
   }
 </style>
 <section class="bg-light" id="publications" style="clear:both;">
@@ -599,7 +889,7 @@ layout: default
 
     @media (max-width: 760px) {
       #project.projects-showcase { padding: 20px 0 56px; }
-      #project .projects-shell { width: min(100% - 32px, 1180px); }
+      #project .projects-shell { width: min(100% - 24px, 1180px); }
       #project .project-frame { padding: 8px; border-radius: 19px; }
       #project .project-visual { border-radius: 13px; }
       #project .project-meta { grid-template-columns: 1fr; gap: 18px; padding: 22px 14px 12px; }
@@ -649,7 +939,7 @@ layout: default
           <div class="project-number">02 · AerialDoJo Project</div>
           <h2 class="project-name">AerialDoJo: Open-world Aerial Object-Goal Search</h2>
           <p class="project-description">
-            Aerial agents autonomously search for objects by goal-driven exploration in open-world environments, where agents operate based on high-level semantic goals without relying on detailed instructional guidance.
+            Aerial agents autonomously search object by goal-driven exploration in open-world environments, where agents operate based on high-level semantic goals without relying on detailed instructional guidance as in VLN.
           </p>
           <div class="project-tags" aria-label="Dataset modalities">
             <span class="project-tag"><a href="">Simulator</a></span>
@@ -658,9 +948,6 @@ layout: default
             <span class="project-tag"><a href="">Benchmark</a></span>
           </div>
         </div>
-        <a class="project-action" href="https://fengtt42.github.io/U2UData-2/" target="_blank" rel="noopener noreferrer">
-          Explore U2UData+ ↗
-        </a>
       </div>
     </article>
   </div>
