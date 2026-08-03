@@ -15,7 +15,7 @@ layout: default
           <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/ftt.jpg" />
         </a>
         <div class="porfile-name"><h3>Tongtong Feng</h3></div>
-        <h6><a href="https://www.bnrist.tsinghua.edu.cn/">Assistant Researcher</a></h6>
+        <div class="porfile-name"><h5>Assistant Researcher</h5></div>
         <h6><a href="https://www.tsinghua.edu.cn/">Tsinghua University</a></h6>
         <h6><a href="mailto:fengtongtong@tsinghua.edu.cn">fengtongtong@tsinghua.edu.cn</a></h6>
         <h6><a href="https://fengtt42.github.io/U2UData-2">PROJECT</a></h6>
