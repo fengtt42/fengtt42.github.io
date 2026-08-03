@@ -15,7 +15,7 @@ layout: default
           <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/ftt.jpg" />
         </a>
         <div class="porfile-name"><h3>Tongtong Feng</h3></div>
-        <div class="profile-student text-muted"><h5>Postdoctoral</h5></div>
+        <div class="profile-student text-muted"><h5>Assistant Researcher</h5></div>
         <h6><a href="https://www.tsinghua.edu.cn/">Tsinghua University</a></h6>
         <h6><a href="mailto:fengtongtong@tsinghua.edu.cn">fengtongtong@tsinghua.edu.cn</a></h6>
         <h6><a href="https://fengtt42.github.io/U2UData-2">PROJECT</a></h6>
@@ -44,7 +44,7 @@ layout: default
       <h1>Biography</h1>
       
       <p class="text-muted">
-        I am a postdoctoral researcher at <u>Tsinghua University</u> (2023-), working with
+        I am an assistant researcher at <u>Tsinghua University</u> (2023-), working with
         Prof. <a href="https://scholar.google.com/citations?user=7t2jzpgAAAAJ&hl=en">Wenwu Zhu </a>
         and 
         Prof. <a href = "https://mn.cs.tsinghua.edu.cn/xinwang/">Xin Wang</a>
@@ -58,7 +58,7 @@ layout: default
         and
         Prof. <a href="https://teacher.bupt.edu.cn/qiqi">Qi Qi</a>
         at the State Key Laboratory of Networking and Switching Technology, School of Computer and Science.
-        My recent research interests include <b>Embodied AI, Multimodal World Model, and Low-altitude Intelligence</b>.
+        My recent research interests include <b>Embodied AI, World Model, and Multimedia Intelligence</b>.
         <!-- Here are my <a href="https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&user=i_KZwgQAAAAJ">Google Scholar</a>. -->
       </p>
 
