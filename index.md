@@ -37,7 +37,8 @@ layout: default
             <i class="fa fa-github big-icon"></i>
           </a>
         </li>
-      </ul>`r`n    </div>
+      </ul>
+    </div>
 
     <div class="profile-img col-md-8 bio-column">
       <h1>Biography</h1>
