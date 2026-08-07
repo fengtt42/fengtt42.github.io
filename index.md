@@ -363,7 +363,7 @@ layout: default
     <article class="project-frame">
       <div class="project-visual">
         <a href="https://fengtt42.github.io/U2UData-2/" target="_blank" rel="noopener noreferrer" aria-label="Explore the U2UData+ dataset and simulator">
-          <img src="{{ site.baseurl }}/static/files/publications/project_1_2.png" alt="Multi-modal UAV simulation scenes and environmental attributes">
+          <img src="{{ site.baseurl }}/static/files/publications/project_2.png" alt="Multi-modal UAV simulation scenes and environmental attributes">
         </a>
       </div>
       <div class="project-meta">
