@@ -67,7 +67,8 @@ layout: default
           <h4 class="section-subheading news-heading">News</h4>
           <ul class="text-muted">
             <li>[08-2026] <u>NSR:</u> One Paper accepted, thanks to all co-authors!</li>
-            <li>[07-2026] <u>ACM MM:</u> One Paper accepted, thanks to all co-authors!</li>
+            <li>[07-2026] <u>科技导报:</u> One Paper accepted, thanks to all co-authors!</li>
+            <li>[06-2026] <u>ACM MM:</u> One Paper accepted, thanks to all co-authors!</li>
             <li>[05-2026] <u>Springer:</u> One <span class="highlight-accent">book</span> accepted, thanks to all co-authors!</li>
             <li>[05-2026] <u>TMLR:</u> One paper accepted, thanks to all co-authors!</li>
             <li>[02-2026] <u>CVPR:</u> One paper accepted, thanks to all co-authors!</li>
