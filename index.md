@@ -399,13 +399,13 @@ layout: default
     <article class="project-frame">
       <div class="project-visual">
         <a href="https://fengtt42.github.io/U2UData-2/" target="_blank" rel="noopener noreferrer" aria-label="Explore the U2UData+ dataset and simulator">
-          <img src="{{ site.baseurl }}/static/files/publications/2026-AerialDojo.png" alt="Multi-modal UAV simulation scenes and environmental attributes">
+          <img src="{{ site.baseurl }}/static/files/publications/2-project.png" alt="Multi-modal UAV simulation scenes and environmental attributes">
         </a>
       </div>
       <div class="project-meta">
         <div>
           <div class="project-number">02 · AerialDoJo Project</div>
-          <h2 class="project-name">AerialDojo-200K: A Large-Scale Benchmark Suite for Open-World Aerial Object-Goal Search</h2>
+          <h2 class="project-name">AerialDojo: Open-World Aerial Object-Goal Search</h2>
           <p class="project-description">
             Aerial agents autonomously search for target objects by goal-driven long-horizon exploration in unknown, large-scale, unstructured three-dimensional environments, where agents operate based on high-level semantic goals without relying on detailed instructional guidance.
           </p>
@@ -417,7 +417,7 @@ layout: default
           </div>
         </div>
         <a class="project-action" href="https://fengtt42.github.io/U2UData-2/" target="_blank" rel="noopener noreferrer">
-          Explore AerialDoJo-200K ↗
+          Explore AerialDoJo ↗
         </a>
       </div>
     </article>
