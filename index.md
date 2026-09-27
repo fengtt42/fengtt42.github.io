@@ -100,6 +100,40 @@ layout: default
 
       <div class="publication">
         <div class="publication-left">
+          <img src="{{ site.baseurl }}/static/files/publications/2026-AerialDojo.png" />
+        </div>
+        <div class="publication-right" >
+          <div class="text-muted publication-content">
+            <h5 class="pub-title"><a href="">AerialDojo-200K: A Large-Scale Benchmark Suite for Open-World Aerial Object-Goal Search</a></h5>
+            <div class="pub-authors">
+              <b>Tongtong Feng</b>, Xin Wang, Haoran Hou, Ren Wang, Weiran Wang, Shaokai Zhu, Ziqi Jia, Hao Wang, Yu-Wei Zhan, Zongyuan Wu, Jinghao Cui, Wenwu Zhu
+            </div>
+            <div class="pub-authors">
+              <i>Under Reviewing</i>, 2026.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="publication">
+        <div class="publication-left">
+          <img src="{{ site.baseurl }}/static/files/publications/2026-AerialWAM.png" />
+        </div>
+        <div class="publication-right" >
+          <div class="text-muted publication-content">
+            <h5 class="pub-title"><a href="">AerialWAM: Reconstructive Aerial World Action Model for Open-world Semantic-level Object-goal Search</a></h5>
+            <div class="pub-authors">
+              <b>Tongtong Feng</b>, Binwei Zhang, Jingyan Shi, Xin Wang, Wenwu Zhu
+            </div>
+            <div class="pub-authors">
+              <i>Under Reviewing</i>, 2026.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="publication">
+        <div class="publication-left">
           <img src="{{ site.baseurl }}/static/files/publications/2026-NSR.png" />
         </div>
         <div class="publication-right" >
