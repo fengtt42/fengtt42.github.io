@@ -404,20 +404,20 @@ layout: default
       </div>
       <div class="project-meta">
         <div>
-          <div class="project-number">02 · AerialDoJo Project</div>
+          <div class="project-number">02 · AerialDojo Project</div>
           <h2 class="project-name">AerialDojo: Open-World Aerial Object-Goal Search</h2>
           <p class="project-description">
             Aerial agents autonomously search for target objects through goal-driven, long-horizon exploration in unknown, large-scale, unstructured 3D environments, operating on high-level semantic goals without relying on detailed instructional guidance.
           </p>
           <div class="project-tags" aria-label="Dataset modalities">
-            <span class="project-tag"><a href="">Simulator</a></span>
-            <span class="project-tag"><a href="">DataSet</a></span>
-            <span class="project-tag"><a href="">Tasks</a></span>
-            <span class="project-tag"><a href="">Benchmark</a></span>
+            <span class="project-tag"><a href="https://huggingface.co/datasets/fengtt42/AerialDojo-200K/tree/main/AerialENVS">Simulator</a></span>
+            <span class="project-tag"><a href="https://huggingface.co/datasets/fengtt42/AerialDojo-200K/tree/main/TrajectoryDATA">DataSet</a></span>
+            <span class="project-tag"><a href="https://huggingface.co/datasets/fengtt42/AerialDojo-200K/tree/main/SemanticOGS">Tasks</a></span>
+            <span class="project-tag"><a href="https://github.com/fengtt42/AerialDojo-200K">Benchmark</a></span>
           </div>
         </div>
-        <a class="project-action" href="https://fengtt42.github.io/U2UData-2/" target="_blank" rel="noopener noreferrer">
-          Explore AerialDoJo ↗
+        <a class="project-action" href="https://fengtt42.github.io/AerialDojo/" target="_blank" rel="noopener noreferrer">
+          Explore AerialDojo ↗
         </a>
       </div>
     </article>
