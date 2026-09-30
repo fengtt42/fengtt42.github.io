@@ -104,7 +104,7 @@ layout: default
         </div>
         <div class="publication-right" >
           <div class="text-muted publication-content">
-            <h5 class="pub-title"><a href="">AerialDojo-200K: A Large-Scale Benchmark Suite for Open-World Aerial Object-Goal Search</a></h5>
+            <h5 class="pub-title"><a href="https://arxiv.org/pdf/2609.36066">AerialDojo-200K: A Large-Scale Benchmark Suite for Open-World Aerial Object-Goal Search</a></h5>
             <div class="pub-authors">
               <b>Tongtong Feng</b>, Xin Wang, Haoran Hou, Ren Wang, Weiran Wang, Shaokai Zhu, Ziqi Jia, Hao Wang, Yu-Wei Zhan, Zongyuan Wu, Jinghao Cui, Wenwu Zhu
             </div>
